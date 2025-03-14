@@ -85,44 +85,47 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: inherit;
-}
-
-h1 {
-  background-color: #343434;
   color: white;
 }
 
-.responsive-test {
-  width: 100px;
-  height: 100px;
+.page {
+  width: 100vw;
+  height: 100vh;
+  background-color: #1f1f1f;
 }
-@media (min-width: 0) {
-  .responsive-test {
-    background-color: red;
-  }
+.page__content {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas: "navbar navbar navbar" "sidebar explorer editor" "footer footer footer";
+  grid-template-rows: 40px auto 30px;
+  grid-template-columns: 50px minmax(100px, 250px) 1fr;
 }
-@media (min-width: 480px) {
-  .responsive-test {
-    background-color: blue;
-  }
+.navbar {
+  display: flex;
+  grid-area: navbar;
+  background-color: #181818;
+  border-bottom: 1px solid #2b2b2b;
 }
-@media (min-width: 720px) {
-  .responsive-test {
-    background-color: green;
-  }
+
+.footer {
+  grid-area: footer;
+  background-color: #181818;
+  border-top: 1px solid #2b2b2b;
 }
-@media (min-width: 960px) {
-  .responsive-test {
-    background-color: purple;
-  }
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #181818;
+  border-right: 1px solid #2b2b2b;
 }
-@media (min-width: 1200px) {
-  .responsive-test {
-    background-color: orange;
-  }
+
+.explorer {
+  grid-area: explorer;
+  background-color: #181818;
+  border-right: 1px solid #2b2b2b;
 }
-@media (min-width: 1400px) {
-  .responsive-test {
-    background-color: pink;
-  }
+
+.editor {
+  grid-area: editor;
 }

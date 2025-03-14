@@ -1,45 +1,19 @@
 // variables & fucntions
-@use 'variables' as vars;
+
 
 // base & layout
 @use 'base';
 @use 'breakpoints' as bp;
 
 //colors
+@use 'colors' as colors;
 
 // components
+@use 'components/page';
 
-h1 {
-    background-color: vars.$black;
-    color: white;
-}
+@use 'components/navbar';
+@use 'components/footer';
 
-// test
-.responsive-test {
-    width: 100px;
-    height: 100px;
-
-    @include bp.xs {
-        background-color: red;
-    }
-
-    @include bp.sm {
-        background-color: blue;
-    }
-
-    @include bp.md {
-        background-color: green;
-    }
-
-    @include bp.lg {
-        background-color: purple;
-    }
-
-    @include bp.xl {
-        background-color: orange;
-    }
-
-    @include bp.breakpoint(1400px) {
-        background-color: pink;
-    }
-}
+@use 'components/sidebar';
+@use 'components/explorer';
+@use 'components/editor';

@@ -1,0 +1,30 @@
+@use 'colors' as colors;
+@use 'breakpoints' as bp;
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    background-color: colors.$bg;
+
+    &__content {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-areas:
+            "navbar navbar navbar"
+            "sidebar explorer editor"
+            "footer footer footer";
+        grid-template-rows: 40px auto 30px;
+        grid-template-columns: 50px minmax(100px, 250px) 1fr;
+    }
+
+    &__sidebar {}
+
+    &__explorer {}
+
+    &__editor {}
+
+    &__navbar {}
+
+    &__footer {}
+}

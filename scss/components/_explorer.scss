@@ -1,0 +1,7 @@
+@use 'colors' as colors;
+
+.explorer {
+    grid-area: explorer;
+    background-color: colors.$bg-dark;
+    border-right: 1px solid colors.$block-border;
+}
