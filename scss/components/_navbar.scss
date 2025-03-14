@@ -5,4 +5,58 @@
     grid-area: navbar;
     background-color: colors.$bg-dark;
     border-bottom: 1px solid colors.$block-border;
+
+    &__content {
+        width: 100%;
+        height: 100%;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        transform: rotate(90deg);
+    }
+
+    &__title-block {}
+
+    &__window-buttons {}
+}
+
+.navbar-title-block {
+    width: 500px;
+    height: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: colors.$bg-light;
+    border-radius: 5px;
+    border: 1px solid colors.$block-border-light;
+
+    &__title {
+        font-weight: 100;
+        font-size: 14px;
+        color: colors.$text-gray;
+    }
+}
+
+.navbar-window-buttons {
+    height: 100%;
+    display: inline-flex;
+}
+
+.navbar-button {
+    width: 50px;
+    background-color: transparent;
+
+    &__icon {
+        width: 15px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
 }
