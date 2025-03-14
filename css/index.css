@@ -104,7 +104,6 @@ h6 {
 .navbar {
   display: flex;
   grid-area: navbar;
-  background-color: #181818;
   border-bottom: 1px solid #2b2b2b;
 }
 
