@@ -1,4 +1,39 @@
+@use 'colors' as colors;
+
+$editor-line-height: 1.3;
+
 .editor {
     grid-area: editor;
+    display: flex;
     font-family: 'Fira Code', Consolas, monospace, sans-serif;
+    font-size: 20px;
+
+    &__text-area {
+        flex-grow: 1;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: colors.$text-editor;
+        resize: none;
+        font-size: inherit;
+        line-height: $editor-line-height;
+        white-space: nowrap;
+        overflow-x: scroll;
+    }
+}
+
+.line-counter {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 75px;
+    //background-color: black;
+    padding: 0 15px;
+    line-height: $editor-line-height;
+
+    &__number {
+        color: colors.$text-dark-gray;
+        font-weight: 500;
+    }
 }

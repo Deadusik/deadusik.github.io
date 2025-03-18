@@ -1,0 +1,30 @@
+@use 'colors' as colors;
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+
+}
+
+::-webkit-scrollbar-track {
+    background: colors.$bg;
+    border: 1px solid colors.$bg-dark;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba($color: colors.$bar, $alpha: 0.7);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(colors.$active-bar, $alpha: 0.7);
+}
+
+::-webkit-scrollbar-horizontal {
+    height: 8px;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+    cursor: default;
+}

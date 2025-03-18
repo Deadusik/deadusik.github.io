@@ -1,3 +1,10 @@
-import { PI } from "./test.js";
+import { writeText } from "./editor/editorUtils.js";
+import { initEditor } from "./editor/initEditor.js";
+import { testText } from "./editor/textData.js";
 
-console.log(PI)
+main()
+
+function main() {
+    initEditor()
+    writeText(testText, 2)
+}
