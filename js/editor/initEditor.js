@@ -1,5 +1,3 @@
-import { writeText } from "./editorUtils.js"
-
 const ITEM_CLASS = 'line-counter__number'
 let editor = null
 let count = 0
