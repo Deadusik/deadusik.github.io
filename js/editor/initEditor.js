@@ -1,50 +1,27 @@
 const ITEM_CLASS = 'line-counter__number'
-let editor = null
 let count = 0
 
-export const initEditor = () => {
-    editor = document.getElementById('editor')
-    // remove redundant line by default
-    editor.value = editor.value.trimStart()
-
+export const initEditor = (editor) => {
     const counter = document.getElementById('counter')
 
-    editor.addEventListener('input', (e) => {
-        if (editor) {
-            const text = e.target.value
-            const lines = text.split('\n')
+    if (editor && counter) {
+        editor.addEventListener('input', (e) => {
+            if (editor) {
+                const text = e.target.textContent
+                const lines = text.split('\n')
 
-            console.log(lines)
+                count = 0
+                counter.textContent = ''
 
-            count = 0
-            counter.innerHTML = ''
-            editor.value = editor.value.trimStart()
-
-            for (const line of lines) {
-                count++
-                counter.append(getCounterItem(count))
+                for (const line of lines) {
+                    count++
+                    counter.append(getCounterItem(count))
+                }
             }
-        }
-    })
-}
-
-export function updateEditor() {
-    if (editor) {
-        const text = e.target.value
-        const lines = text.split('\n')
-
-        console.log(lines)
-
-        count = 0
-        counter.innerHTML = ''
-        editor.value = editor.value.trimStart()
-
-        for (const line of lines) {
-            count++
-            counter.append(getCounterItem(count))
-        }
+        })
     }
 }
+
 
 function getCounterItem(number) {
     const element = document.createElement('p')

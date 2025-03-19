@@ -23,6 +23,10 @@
     height: 8px;
 }
 
+::-webkit-scrollbar-corner {
+    background: colors.$bg;
+}
+
 ::-webkit-scrollbar,
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-thumb {
