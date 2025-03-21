@@ -258,6 +258,39 @@ h6 {
   border-right: 1px solid #2b2b2b;
 }
 
+.sidebar-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 5px 0;
+  position: relative;
+}
+.sidebar-button__icon {
+  width: 35px;
+  height: 35px;
+  opacity: 0.5;
+}
+.sidebar-button__icon:hover {
+  opacity: 1;
+}
+.sidebar-button::before {
+  content: "";
+}
+.sidebar-button--active .sidebar-button__icon {
+  opacity: 1;
+}
+.sidebar-button--active::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #0078d4;
+}
+
 .explorer {
   grid-area: explorer;
   background-color: #181818;

@@ -1,6 +1,9 @@
 let queue = Promise.resolve()
+const editor = document.getElementById('editor')
+const lineCounter = document.getElementById('line')
+const colCounter = document.getElementById('col')
 
-export function writeText(text, dalay, editor) {
+export function writeText(text, dalay) {
     // add text writing to queue for sync typing
     queue = queue.then(() => new Promise((resolve) => {
         if (!editor) return resolve()
@@ -24,12 +27,9 @@ export function writeText(text, dalay, editor) {
     }))
 }
 
-const lineCounter = document.getElementById('line')
-const colCounter = document.getElementById('col')
-
 export function setCusorInfo(line, col) {
     if (lineCounter && colCounter) {
-        lineCounter.textContent = line
+        lineCounter.textContent = line + ','
         colCounter.textContent = col
     }
 }   

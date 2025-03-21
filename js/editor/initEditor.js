@@ -39,16 +39,16 @@ function getCounterItem(number) {
     return element
 }
 
-function editorEasterEgg(clicks, editor) {
+function editorEasterEgg(clicks) {
     //console.log(clicks)
 
     if (clicks === 7) {
-        writeText(`\n\nYou know...`, 100, editor)
+        writeText(`\n\nYou know...`, 100)
     }
     else if (clicks === 6) {
-        writeText(`\n\nI think...`, 100, editor)
+        writeText(`\n\nI think...`, 100)
     }
     else if (clicks === 3) {
-        writeText(`\n\n...`, 100, editor)
+        writeText(`\n\n...`, 100)
     }
 }
