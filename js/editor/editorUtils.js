@@ -1,12 +1,15 @@
+let queue = Promise.resolve()
+
 export function writeText(text, dalay, editor) {
-    if (editor) {
+    // add text writing to queue for sync typing
+    queue = queue.then(() => new Promise((resolve) => {
+        if (!editor) return resolve()
+
         const textArr = text.split('')
         // cut redundant space by default
         let tempText = editor.innerHTML.trimStart()
 
-        let i = 0
-        for (const letter of textArr) {
-            i++
+        textArr.forEach((letter, index) => {
             setTimeout(() => {
                 tempText += letter
                 editor.innerHTML = tempText
@@ -14,7 +17,19 @@ export function writeText(text, dalay, editor) {
                 // simulate on change event
                 const inputEvent = new Event('input')
                 editor.dispatchEvent(inputEvent)
-            }, i * dalay)
-        }
-    }
+
+                if (index === textArr.length - 1) resolve()
+            }, index * dalay)
+        })
+    }))
 }
+
+const lineCounter = document.getElementById('line')
+const colCounter = document.getElementById('col')
+
+export function setCusorInfo(line, col) {
+    if (lineCounter && colCounter) {
+        lineCounter.textContent = line
+        colCounter.textContent = col
+    }
+}   

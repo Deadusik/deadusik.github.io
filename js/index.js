@@ -9,14 +9,18 @@ function main() {
 
     init(editor)
 
-    writeText(someText, 2, editor)
+    writeText(someText, 10, editor)
 }
 
 function init(editor) {
     initEditor(editor)
 
+    const iconClickHandler = () => {
+        writeText(easterEggText, 2, editor)
+        icon.removeEventListener('click', iconClickHandler)
+    }
+
     const icon = document.getElementById('icon')
-    icon.addEventListener('click', () => {
-        writeText(easterEggText, 2)
-    })
+    icon.addEventListener('click', iconClickHandler)
+
 }
