@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="page">
+    <div id="page" class="page">
         <div class="page__content">
             <navbar class="navbar page__navbar">
                 <div class="navbar__content">
@@ -28,14 +28,94 @@
             </navbar>
             <!-- SIDEBAR -->
             <aside class="sidebar page__sidebar">
-                <button id="files" class="sidebar-button">
+                <button id="files" class="sidebar-button sidebar-button--active">
                     <div class="sidebar-button__active-line"></div>
                     <img class="sidebar-button__icon" src="assets/files.svg">
                 </button>
             </aside>
             <!-- EXPLORER -->
-            <aside class="explorer page__explorer">
-                <h1>EXPLORER</h1>
+            <aside id="explorer" class="explorer page__explorer">
+                <div class="explorer__content">
+                    <!-- project title -->
+                    <section class="explorer-title-block explorer-title-block--collapsed">
+                        <h1 class="explorer-title-block__title">RESUME</h1>
+                        <button class="explorer-title-block__collapse-button explorer-collapse-button">
+                            <img class="explorer-collapse-button__icon" src="assets/collapse.svg" />
+                        </button>
+                    </section>
+                    <!-- file structure -->
+                    <section class="explorer-files">
+                        <!-- main folder -->
+                        <div class="folder">
+                            <div class="folder__content">
+                                <div class="folder__title-block">
+                                    <h3 class="folder__title">main</h3>
+                                </div>
+                                <!-- folder files -->
+                                <div class="folder__children-block">
+                                    <!-- file -->
+                                    <div class="file">
+                                        <div class="file__content">
+                                            <h3 class="file__title">main info.txt</h3>
+                                        </div>
+                                    </div>
+                                    <!-- file -->
+                                    <div class="file">
+                                        <div class="file__content">
+                                            <h3 class="file__title">main info.txt</h3>
+                                        </div>
+                                    </div>
+                                    <!-- file -->
+                                    <div class="file">
+                                        <div class="file__content">
+                                            <h3 class="file__title">main info.txt</h3>
+                                        </div>
+                                    </div>
+                                    <!-- file -->
+                                    <div class="file">
+                                        <div class="file__content">
+                                            <h3 class="file__title">main info.txt</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="folder">
+                            <div class="folder__content">
+                                <div class="folder__title-block">
+                                    <h3 class="folder__title">main</h3>
+                                </div>
+                                <!-- folder files -->
+                                <div class="folder__children-block">
+                                    <!-- file -->
+                                    <div class="file">
+                                        <div class="file__content">
+                                            <h3 class="file__title">main info.txt</h3>
+                                        </div>
+                                    </div>
+                                    <!-- file -->
+                                    <div class="file">
+                                        <div class="file__content">
+                                            <h3 class="file__title">main info.txt</h3>
+                                        </div>
+                                    </div>
+                                    <!-- file -->
+                                    <div class="file">
+                                        <div class="file__content">
+                                            <h3 class="file__title">main info.txt</h3>
+                                        </div>
+                                    </div>
+                                    <!-- file -->
+                                    <div class="file">
+                                        <div class="file__content">
+                                            <h3 class="file__title">main info.txt</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </aside>
             <!-- EDITOR -->
             <div class="editor page__editor">

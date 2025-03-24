@@ -1,0 +1,35 @@
+@use 'colors.scss';
+
+.file {
+    width: 100%;
+
+    &__content {
+        padding: 5px;
+        padding-left: 50px;
+    }
+
+    &__title {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url('../assets/vs.svg');
+            width: 15px;
+            height: 15px;
+            background-size: cover;
+            left: -20px;
+            top: 0px;
+            transform: rotate(90deg);
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: colors.$hover-dark;
+    }
+
+    &--selected {
+        background-color: colors.$hover-dark;
+    }
+}

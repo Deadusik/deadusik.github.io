@@ -31,6 +31,12 @@ export const initEditor = (editor) => {
     }
 }
 
+export function clearEditor() {
+    if (editor) {
+        editor.textContent = ''
+    }
+}
+
 function getCounterItem(number) {
     const element = document.createElement('p')
     element.className = ITEM_CLASS
