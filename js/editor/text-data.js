@@ -1,3 +1,8 @@
+export const helloText = `Hi, my name is ...
+I'm frontend developer
+Usually I use react library
+to develop fronted web apps...`
+
 export const someText = `Hello, my name is Someone, 
 I'm 24 years old
 I like cycling 

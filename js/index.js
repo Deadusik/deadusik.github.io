@@ -1,16 +1,13 @@
 import { setEditorText } from "./editor/editor-utils.js";
 import { initEditor } from "./editor/editor.js";
-import { easterEggText, someText } from "./editor/text-data.js";
+import { easterEggText, helloText } from "./editor/text-data.js";
 import { initExplorer } from "./explorer.js";
 
 main()
 
 function main() {
-
-
     initApp()
-
-    setEditorText(someText, 10)
+    setEditorText(helloText, 10)
 }
 
 function initApp() {

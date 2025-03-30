@@ -160,7 +160,8 @@ h6 {
   transform: rotate(90deg);
 }
 .navbar-title-block {
-  width: 500px;
+  width: 50%;
+  max-width: 500px;
   height: 23px;
   display: flex;
   justify-content: center;
@@ -391,7 +392,7 @@ h6 {
   color: #4cc1f2;
   font-size: inherit;
   line-height: 1.3;
-  white-space: pre-wrap;
+  white-space: pre;
   position: relative;
 }
 .editor__text-area::after {
