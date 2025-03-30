@@ -1,4 +1,4 @@
-import { writeText } from "./editor/editorUtils.js";
+import { setEditorText } from "./editor/editorUtils.js";
 import { initEditor } from "./editor/editor.js";
 import { easterEggText, someText } from "./editor/textData.js";
 import { initExplorer } from "./explorer.js";
@@ -11,7 +11,7 @@ function main() {
 
     initApp(editor, explorer)
 
-    writeText(someText, 10)
+    setEditorText(someText, 10)
 }
 
 function initApp(editor, explorer) {
@@ -24,7 +24,7 @@ function initApp(editor, explorer) {
     const filesButton = document.getElementById('files')
 
     const iconClickHandler = () => {
-        writeText(easterEggText, 2)
+        setEditorText(easterEggText, 2)
         icon.removeEventListener('click', iconClickHandler)
     }
     icon.addEventListener('click', iconClickHandler)

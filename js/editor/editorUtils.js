@@ -1,46 +1,35 @@
-let queue = Promise.resolve()
 const editor = document.getElementById('editor')
 const lineCounter = document.getElementById('line')
 const colCounter = document.getElementById('col')
-let shouldStop = false
-let timeouts = []
+let abortController = null
 
-export function writeText(text, dalay) {
-    stopTyping()
-    shouldStop = false
-    // add text writing to queue for sync typing
-    queue = queue.then(() => new Promise((resolve) => {
-        if (!editor) return resolve()
+export async function setEditorText(text, delay) {
+    if (abortController) abortController.abort()
 
-        const textArr = text.split('')
-        // cut redundant space by default
-        let tempText = editor.innerHTML.trimStart()
-
-        textArr.forEach((letter, index) => {
-            const timeout = setTimeout(() => {
-                console.log(shouldStop) //
-
-                if (shouldStop) return resolve()
-
-                tempText += letter
-                editor.innerHTML = tempText
-
-                // simulate on change event
-                const inputEvent = new Event('input')
-                editor.dispatchEvent(inputEvent)
-
-                if (index === textArr.length - 1) resolve()
-            }, index * dalay)
-
-            timeouts.push(timeout)
-        })
-    }))
+    abortController = new AbortController()
+    await setAsyncText(text, delay, abortController.signal)
 }
 
-export function stopTyping() {
-    shouldStop = true
-    //timeouts.forEach(timeout => clearTimeout(timeout))
-    //timeouts = []
+async function setAsyncText(text, delay, signal) {
+    let tempText = editor.innerHTML.trimStart()
+    const textArr = text.split('')
+
+    for (let i = 0; i < textArr.length; i++) {
+        if (signal.aborted) return
+        tempText += await setAsyncSymbol(textArr[i], delay)
+        editor.innerHTML = tempText
+    }
+}
+
+function setAsyncSymbol(letter, delay) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            // simulate on change event
+            const inputEvent = new Event('input')
+            editor.dispatchEvent(inputEvent)
+            resolve(letter)
+        }, delay)
+    })
 }
 
 export function setCusorInfo(line, col) {

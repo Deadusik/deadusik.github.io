@@ -1,5 +1,5 @@
 import { clearEditor } from "./editor/editor.js"
-import { stopTyping, writeText } from "./editor/editorUtils.js"
+import { setEditorText } from "./editor/editorUtils.js"
 import { someText } from "./editor/textData.js"
 
 export function initExplorer(explorer, editor) {
@@ -28,9 +28,8 @@ export function initExplorer(explorer, editor) {
 function setEditorContent(fileName) {
     switch (fileName) {
         case 'main info.txt': {
-            stopTyping()
             clearEditor()
-            writeText(someText, 10)
+            setEditorText(someText, 10)
             break
         }
     }
