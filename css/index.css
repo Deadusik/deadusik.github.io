@@ -35,6 +35,7 @@
   margin: 0;
   border: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
 }
 
 *,
@@ -134,6 +135,9 @@ h6 {
   grid-template-areas: "navbar navbar navbar" "sidebar explorer editor" "footer footer footer";
   grid-template-rows: 35px auto 25px;
   grid-template-columns: 50px minmax(100px, 250px) auto;
+}
+.page__content--editor-full {
+  grid-template-areas: "navbar navbar navbar" "sidebar editor editor" "footer footer footer";
 }
 .navbar {
   display: flex;
@@ -257,10 +261,107 @@ h6 {
   border-right: 1px solid #2b2b2b;
 }
 
+.sidebar-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 5px 0;
+  position: relative;
+}
+.sidebar-button__icon {
+  width: 35px;
+  height: 35px;
+  opacity: 0.5;
+}
+.sidebar-button__icon:hover {
+  opacity: 1;
+}
+.sidebar-button::before {
+  content: "";
+}
+.sidebar-button--active .sidebar-button__icon {
+  opacity: 1;
+}
+.sidebar-button--active::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #0078d4;
+}
+
 .explorer {
   grid-area: explorer;
   background-color: #181818;
   border-right: 1px solid #2b2b2b;
+}
+.explorer__title-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.explorer--hidden {
+  display: none;
+}
+.explorer-title-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 5px;
+}
+.explorer-title-block__title {
+  color: #cccccc;
+  font-weight: 600;
+}
+.explorer-title-block__collapse-icon {
+  width: 20px;
+  height: 20px;
+}
+.explorer-title-block::before {
+  content: "";
+  position: absolute;
+  background-image: url("../assets/collapse-arrow.svg");
+  width: 15px;
+  height: 15px;
+  background-size: cover;
+  left: 3px;
+  top: 13px;
+  transform: rotate(270deg);
+}
+.explorer-title-block:hover {
+  cursor: pointer;
+}
+.explorer-title-block:hover .explorer-title-block__collapse-button {
+  visibility: visible;
+}
+.explorer-title-block--collapsed::before {
+  transform: rotate(180deg);
+}
+
+.explorer-collapse-button {
+  padding: 1px;
+  background-color: transparent;
+  visibility: hidden;
+}
+.explorer-collapse-button__icon {
+  width: 20px;
+  height: 20px;
+}
+.explorer-collapse-button:hover {
+  background-color: #37373d;
+}
+
+.explorer-files {
+  display: flex;
+  flex-direction: column;
 }
 
 .editor {
@@ -307,4 +408,79 @@ h6 {
 .line-counter__number {
   color: #6e7681;
   font-weight: 500;
+}
+
+.file {
+  width: 100%;
+}
+.file__content {
+  padding: 5px;
+  padding-left: 50px;
+}
+.file__title {
+  position: relative;
+}
+.file__title::before {
+  content: "";
+  position: absolute;
+  background-image: url("../assets/vs.svg");
+  width: 15px;
+  height: 15px;
+  background-size: cover;
+  left: -20px;
+  top: 0px;
+  transform: rotate(90deg);
+}
+.file:hover {
+  cursor: pointer;
+  background-color: #37373d;
+}
+.file--selected {
+  background-color: #37373d;
+}
+
+.folder {
+  width: 100%;
+}
+.folder__title {
+  position: relative;
+}
+.folder__title::before {
+  content: "";
+  position: absolute;
+  background-image: url("../assets/collapse-arrow.svg");
+  width: 15px;
+  height: 15px;
+  background-size: cover;
+  left: -38px;
+  top: -1px;
+  transform: rotate(270deg);
+}
+.folder__title::after {
+  content: "";
+  position: absolute;
+  background-image: url("../assets/folder/folder-opened.svg");
+  width: 15px;
+  height: 15px;
+  background-size: cover;
+  left: -20px;
+  top: 0px;
+}
+.folder__title-block {
+  width: 100%;
+  padding: 5px;
+  padding-left: 45px;
+}
+.folder__title-block:hover {
+  cursor: pointer;
+  background-color: #37373d;
+}
+.folder--collapsed .folder__title::before {
+  transform: rotate(180deg);
+}
+.folder--collapsed .folder__title::after {
+  background-image: url("../assets/folder/folder.svg");
+}
+.folder--collapsed .folder__children-block {
+  display: none;
 }

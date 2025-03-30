@@ -1,4 +1,4 @@
-import { setCusorInfo, writeText } from "./editorUtils.js"
+import { setCusorInfo, setEditorText } from "./editorUtils.js"
 
 const ITEM_CLASS = 'line-counter__number'
 let count = 0
@@ -31,6 +31,12 @@ export const initEditor = (editor) => {
     }
 }
 
+export function clearEditor() {
+    if (editor) {
+        editor.textContent = ''
+    }
+}
+
 function getCounterItem(number) {
     const element = document.createElement('p')
     element.className = ITEM_CLASS
@@ -39,16 +45,16 @@ function getCounterItem(number) {
     return element
 }
 
-function editorEasterEgg(clicks, editor) {
+function editorEasterEgg(clicks) {
     //console.log(clicks)
 
     if (clicks === 7) {
-        writeText(`\n\nYou know...`, 100, editor)
+        setEditorText(`\n\nYou know...`, 100)
     }
     else if (clicks === 6) {
-        writeText(`\n\nI think...`, 100, editor)
+        setEditorText(`\n\nI think...`, 100)
     }
     else if (clicks === 3) {
-        writeText(`\n\n...`, 100, editor)
+        setEditorText(`\n\n...`, 100)
     }
 }

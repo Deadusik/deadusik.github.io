@@ -4,4 +4,84 @@
     grid-area: explorer;
     background-color: colors.$bg-dark;
     border-right: 1px solid colors.$block-border;
+
+    &__title-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    &--hidden {
+        display: none;
+    }
+
+    &__content {}
+}
+
+.explorer-title-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 5px;
+
+    &__title {
+        color: colors.$text-gray;
+        font-weight: 600;
+    }
+
+    &__collapse-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url('../assets/collapse-arrow.svg');
+        width: 15px;
+        height: 15px;
+        background-size: cover;
+        left: 3px;
+        top: 13px;
+        transform: rotate(270deg);
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        .explorer-title-block__collapse-button {
+            visibility: visible;
+
+        }
+    }
+
+    &--collapsed {
+        &::before {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.explorer-collapse-button {
+    padding: 1px;
+    background-color: transparent;
+    visibility: hidden;
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    &:hover {
+        background-color: colors.$hover-dark;
+    }
+}
+
+.explorer-files {
+    display: flex;
+    flex-direction: column;
 }

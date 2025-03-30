@@ -5,3 +5,43 @@
     background-color: colors.$bg-dark;
     border-right: 1px solid colors.$block-border;
 }
+
+.sidebar-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 5px 0;
+    position: relative;
+
+    &__icon {
+        width: 35px;
+        height: 35px;
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &::before {
+        content: '';
+    }
+
+    &--active {
+        .sidebar-button__icon {
+            opacity: 1;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: colors.$line-blue;
+        }
+    }
+}

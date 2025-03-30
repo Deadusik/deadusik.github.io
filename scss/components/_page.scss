@@ -19,6 +19,13 @@
         grid-template-columns: 50px minmax(100px, 250px) auto;
     }
 
+    &__content--editor-full {
+        grid-template-areas:
+            "navbar navbar navbar"
+            "sidebar editor editor"
+            "footer footer footer";
+    }
+
     &__sidebar {}
 
     &__explorer {}
