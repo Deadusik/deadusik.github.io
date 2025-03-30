@@ -1,6 +1,6 @@
 import { clearEditor } from "./editor/editor.js"
-import { setEditorText } from "./editor/editorUtils.js"
-import { someText } from "./editor/textData.js"
+import { setEditorText } from "./editor/editor-utils.js"
+import { someText, someText2 } from "./editor/text-data.js"
 
 export function initExplorer(explorer, editor) {
     if (explorer && editor) {
@@ -31,6 +31,14 @@ function setEditorContent(fileName) {
             clearEditor()
             setEditorText(someText, 10)
             break
+        }
+        case 'projects info.txt': {
+            clearEditor()
+            setEditorText(someText2, 10)
+            break
+        }
+        default: {
+            clearEditor()
         }
     }
 }

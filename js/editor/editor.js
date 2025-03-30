@@ -1,4 +1,4 @@
-import { setCusorInfo, setEditorText } from "./editorUtils.js"
+import { setCusorInfo, setEditorText } from "./editor-utils.js"
 
 const ITEM_CLASS = 'line-counter__number'
 let count = 0

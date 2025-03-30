@@ -19,5 +19,6 @@
 @use 'components/explorer';
 @use 'components/editor';
 
+@use 'components/files_bar/files-bar';
 @use 'components/explorer_items/file';
 @use 'components/explorer_items/folder';
