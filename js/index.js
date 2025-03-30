@@ -6,17 +6,25 @@ import { initExplorer } from "./explorer.js";
 main()
 
 function main() {
-    const editor = document.getElementById('editor')
-    const explorer = document.getElementById('explorer')
 
-    initApp(editor, explorer)
+
+    initApp()
 
     setEditorText(someText, 10)
 }
 
-function initApp(editor, explorer) {
+function initApp() {
+    const editor = document.getElementById('editor')
+
+    const explorerElements = {
+        explorer: document.getElementById('explorer'),
+        title: explorer.querySelector('#explorer-title'),
+        collapseButton: explorer.querySelector('button'),
+        fileBlock: explorer.querySelector('#explorer-files')
+    }
+
     initEditor(editor)
-    initExplorer(explorer, editor)
+    initExplorer(explorerElements.explorer, editor)
 
     const page = document.getElementById('page')
     const icon = document.getElementById('icon')
@@ -27,7 +35,21 @@ function initApp(editor, explorer) {
         setEditorText(easterEggText, 2)
         icon.removeEventListener('click', iconClickHandler)
     }
+
+    const explorerTitleClickHandler = () => {
+        explorerElements.title.classList.toggle('explorer-title-block--collapsed')
+        explorerElements.fileBlock.classList.toggle('explorer-files--hidden')
+    }
+
+    const explorerCollapseClickHandler = (e) => {
+        e.stopPropagation()
+        const folders = explorerElements.fileBlock.querySelectorAll('.folder')
+        folders.forEach(folder => folder.classList.add('folder--collapsed'))
+    }
+
     icon.addEventListener('click', iconClickHandler)
+    explorerElements.title.addEventListener('click', explorerTitleClickHandler)
+    explorerElements.collapseButton.addEventListener('click', explorerCollapseClickHandler)
 
     // hide/show explorer
     filesButton.addEventListener('click', () => {

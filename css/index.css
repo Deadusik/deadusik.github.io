@@ -315,7 +315,7 @@ h6 {
   align-items: center;
   position: relative;
   padding-top: 10px;
-  padding-left: 20px;
+  padding-left: 22px;
   padding-right: 5px;
 }
 .explorer-title-block__title {
@@ -363,6 +363,9 @@ h6 {
 .explorer-files {
   display: flex;
   flex-direction: column;
+}
+.explorer-files--hidden {
+  display: none;
 }
 
 .editor {
@@ -456,7 +459,7 @@ h6 {
 }
 .file__content {
   padding: 5px;
-  padding-left: 50px;
+  padding-left: 65px;
 }
 .file__title {
   position: relative;
@@ -510,7 +513,7 @@ h6 {
 .folder__title-block {
   width: 100%;
   padding: 5px;
-  padding-left: 45px;
+  padding-left: 55px;
 }
 .folder__title-block:hover {
   cursor: pointer;
