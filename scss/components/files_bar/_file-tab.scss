@@ -1,0 +1,31 @@
+@use 'colors' as colors;
+
+.file-tab {
+    display: inline-flex;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 30px;
+    height: 100%;
+    background-color: colors.$bg;
+    border-right: 1px solid colors.$block-border;
+    border-top: 1px solid colors.$line-blue;
+
+    &__title {
+        font-weight: 400;
+        font-size: 14px;
+        color: colors.$text-gray;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url('../assets/vs.svg');
+            width: 15px;
+            height: 15px;
+            background-size: cover;
+            left: -20px;
+            top: 0px;
+            transform: rotate(90deg);
+        }
+    }
+}
