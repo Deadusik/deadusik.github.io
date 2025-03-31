@@ -1,8 +1,8 @@
 @use 'colors' as colors;
 
 .files-bar {
+    display: flex;
     width: 100vw;
-    height: 100%;
     height: 30px;
     background-color: colors.$bg-dark;
 }
