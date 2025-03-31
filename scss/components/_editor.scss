@@ -43,6 +43,10 @@ $editor-line-height: 1.3;
             }
         }
     }
+
+    &--hidden {
+        display: none;
+    }
 }
 
 .line-counter {

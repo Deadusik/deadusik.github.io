@@ -13,16 +13,30 @@
         display: grid;
         grid-template-areas:
             "navbar navbar navbar"
-            "sidebar explorer editor"
+            "sidebar editor editor"
             "footer footer footer";
         grid-template-rows: 35px auto 25px;
         grid-template-columns: 50px minmax(100px, 250px) auto;
+
+        @include bp.sm {
+            grid-template-areas:
+                "navbar navbar navbar"
+                "sidebar explorer editor"
+                "footer footer footer";
+        }
     }
 
     &__content--editor-full {
         grid-template-areas:
             "navbar navbar navbar"
             "sidebar editor editor"
+            "footer footer footer";
+    }
+
+    &__content--explorer-full {
+        grid-template-areas:
+            "navbar navbar navbar"
+            "sidebar explorer explorer"
             "footer footer footer";
     }
 

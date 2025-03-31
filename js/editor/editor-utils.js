@@ -1,4 +1,4 @@
-const editor = document.getElementById('editor')
+const editor = document.getElementById('text-area')
 const lineCounter = document.getElementById('line')
 const colCounter = document.getElementById('col')
 let abortController = null
