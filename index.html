@@ -37,44 +37,44 @@
             <aside id="explorer" class="explorer page__explorer">
                 <div class="explorer__content">
                     <!-- project title -->
-                    <section class="explorer-title-block explorer-title-block--collapsed">
+                    <section id="explorer-title" class="explorer-title-block">
                         <h1 class="explorer-title-block__title">RESUME</h1>
                         <button class="explorer-title-block__collapse-button explorer-collapse-button">
                             <img class="explorer-collapse-button__icon" src="assets/collapse.svg" />
                         </button>
                     </section>
                     <!-- file structure -->
-                    <section class="explorer-files">
+                    <section id="explorer-files" class="explorer-files">
                         <!-- main folder -->
                         <div class="folder">
                             <div class="folder__content">
                                 <div class="folder__title-block">
-                                    <h3 class="folder__title">main</h3>
+                                    <h3 class="folder__title">info</h3>
                                 </div>
                                 <!-- folder files -->
                                 <div class="folder__children-block">
                                     <!-- file -->
-                                    <div class="file">
+                                    <div class="file file--selected">
                                         <div class="file__content">
-                                            <h3 class="file__title">main info.txt</h3>
+                                            <h3 class="file__title">hello.txt</h3>
                                         </div>
                                     </div>
                                     <!-- file -->
                                     <div class="file">
                                         <div class="file__content">
-                                            <h3 class="file__title">main info.txt</h3>
+                                            <h3 class="file__title">projects info.txt</h3>
                                         </div>
                                     </div>
                                     <!-- file -->
                                     <div class="file">
                                         <div class="file__content">
-                                            <h3 class="file__title">main info.txt</h3>
+                                            <h3 class="file__title">main info2.txt</h3>
                                         </div>
                                     </div>
                                     <!-- file -->
                                     <div class="file">
                                         <div class="file__content">
-                                            <h3 class="file__title">main info.txt</h3>
+                                            <h3 class="file__title">main info3.txt</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -83,32 +83,32 @@
                         <div class="folder">
                             <div class="folder__content">
                                 <div class="folder__title-block">
-                                    <h3 class="folder__title">main</h3>
+                                    <h3 class="folder__title">projects</h3>
                                 </div>
                                 <!-- folder files -->
                                 <div class="folder__children-block">
                                     <!-- file -->
                                     <div class="file">
                                         <div class="file__content">
-                                            <h3 class="file__title">main info.txt</h3>
+                                            <h3 class="file__title">main info4.txt</h3>
                                         </div>
                                     </div>
                                     <!-- file -->
                                     <div class="file">
                                         <div class="file__content">
-                                            <h3 class="file__title">main info.txt</h3>
+                                            <h3 class="file__title">main info5.txt</h3>
                                         </div>
                                     </div>
                                     <!-- file -->
                                     <div class="file">
                                         <div class="file__content">
-                                            <h3 class="file__title">main info.txt</h3>
+                                            <h3 class="file__title">main info6.txt</h3>
                                         </div>
                                     </div>
                                     <!-- file -->
                                     <div class="file">
                                         <div class="file__content">
-                                            <h3 class="file__title">main info.txt</h3>
+                                            <h3 class="file__title">main info7.txt</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -119,10 +119,21 @@
             </aside>
             <!-- EDITOR -->
             <div class="editor page__editor">
-                <div id="counter" class="line-counter">
-                    <p class="line-counter__number">1</p>
+                <!-- tabs -->
+                <div class="files-bar">
+                    <div class="file-tab">
+                        <h3 class="file-tab__title">
+                            main info.txt
+                        </h3>
+                    </div>
                 </div>
-                <div id="editor" contenteditable="false" class="editor__text-area">
+                <!-- text area block -->
+                <div class="editor__text-area-block">
+                    <div id="counter" class="line-counter">
+                        <p class="line-counter__number">1</p>
+                    </div>
+                    <div id="editor" contenteditable="false" class="editor__text-area">
+                    </div>
                 </div>
             </div>
             <!-- FOOTER -->

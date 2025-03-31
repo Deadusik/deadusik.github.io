@@ -159,7 +159,8 @@ h6 {
   transform: rotate(90deg);
 }
 .navbar-title-block {
-  width: 500px;
+  width: 50%;
+  max-width: 500px;
   height: 23px;
   display: flex;
   justify-content: center;
@@ -287,7 +288,7 @@ h6 {
 .sidebar-button--active::before {
   content: "";
   position: absolute;
-  width: 3px;
+  width: 2px;
   height: 100%;
   left: 0;
   top: 0;
@@ -314,7 +315,7 @@ h6 {
   align-items: center;
   position: relative;
   padding-top: 10px;
-  padding-left: 20px;
+  padding-left: 22px;
   padding-right: 5px;
 }
 .explorer-title-block__title {
@@ -363,15 +364,23 @@ h6 {
   display: flex;
   flex-direction: column;
 }
+.explorer-files--hidden {
+  display: none;
+}
 
 .editor {
   grid-area: editor;
   display: flex;
+  flex-direction: column;
   font-family: "Fira Code", Consolas, monospace, sans-serif;
   font-size: 20px;
   background-color: #1f1f1f;
   user-select: none;
   overflow: auto;
+}
+.editor__text-area-block {
+  display: flex;
+  margin-top: 5px;
 }
 .editor__text-area {
   flex-grow: 1;
@@ -382,7 +391,7 @@ h6 {
   color: #4cc1f2;
   font-size: inherit;
   line-height: 1.3;
-  white-space: pre-wrap;
+  white-space: pre;
   position: relative;
 }
 .editor__text-area::after {
@@ -410,12 +419,47 @@ h6 {
   font-weight: 500;
 }
 
+.files-bar {
+  width: 100vw;
+  height: 100%;
+  height: 30px;
+  background-color: #181818;
+}
+
+.file-tab {
+  display: inline-flex;
+  align-items: center;
+  padding-right: 20px;
+  padding-left: 30px;
+  height: 100%;
+  background-color: #1f1f1f;
+  border-right: 1px solid #2b2b2b;
+  border-top: 1px solid #0078d4;
+}
+.file-tab__title {
+  font-weight: 400;
+  font-size: 14px;
+  color: #cccccc;
+  position: relative;
+}
+.file-tab__title::before {
+  content: "";
+  position: absolute;
+  background-image: url("../assets/vs.svg");
+  width: 15px;
+  height: 15px;
+  background-size: cover;
+  left: -20px;
+  top: 0px;
+  transform: rotate(90deg);
+}
+
 .file {
   width: 100%;
 }
 .file__content {
   padding: 5px;
-  padding-left: 50px;
+  padding-left: 65px;
 }
 .file__title {
   position: relative;
@@ -469,7 +513,7 @@ h6 {
 .folder__title-block {
   width: 100%;
   padding: 5px;
-  padding-left: 45px;
+  padding-left: 55px;
 }
 .folder__title-block:hover {
   cursor: pointer;
