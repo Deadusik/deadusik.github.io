@@ -380,7 +380,8 @@ h6 {
 
 .editor {
   grid-area: editor;
-  display: flex;
+  display: grid;
+  grid-template-rows: 30px auto;
   flex-direction: column;
   font-family: "Fira Code", Consolas, monospace, sans-serif;
   font-size: 20px;
@@ -389,11 +390,11 @@ h6 {
   overflow: auto;
 }
 .editor__text-area-block {
+  width: 100%;
   display: flex;
   margin-top: 5px;
 }
 .editor__text-area {
-  flex-grow: 1;
   height: 100%;
   background-color: transparent;
   border: none;
@@ -434,8 +435,9 @@ h6 {
 
 .files-bar {
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 30px;
+  min-height: 30px;
   background-color: #181818;
 }
 
