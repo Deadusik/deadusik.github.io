@@ -13,20 +13,27 @@ export function initExplorer(explorer, relatedElements) {
             fileBlock: explorer.querySelector('#explorer-files')
         }
 
-        // handlers
         const showExplorer = () => {
             relatedElements
                 .filesButton
                 .classList
                 .toggle('sidebar-button--active')
-
             relatedElements
                 .pageContent
                 .classList
-                .toggle('page__content--editor-full')
+                .add('page__content--editor-full')
+            relatedElements
+                .pageContent
+                .classList
+                .remove('page__content--explorer-full')
+            relatedElements
+                .editor
+                .classList
+                .toggle('editor--hidden')
             explorer.classList.toggle('explorer--hidden')
         }
 
+        // handlers
         const titleClickHandler = () => {
             explorerElements.title.classList.toggle('explorer-title-block--collapsed')
             explorerElements.fileBlock.classList.toggle('explorer-files--hidden')
@@ -38,7 +45,7 @@ export function initExplorer(explorer, relatedElements) {
             folders.forEach(folder => folder.classList.add('folder--collapsed'))
         }
 
-        const tabClickHandler = (e) => {
+        const fileClickHandler = (e) => {
             const titleBlock = e.target.closest('.folder__title-block')
             const file = e.target.closest('.file')
 
@@ -64,7 +71,7 @@ export function initExplorer(explorer, relatedElements) {
 
         explorerElements.title.addEventListener('click', titleClickHandler)
         explorerElements.collapseButton.addEventListener('click', collapseClickHandler)
-        explorer.addEventListener('click', tabClickHandler)
+        explorer.addEventListener('click', fileClickHandler)
     }
 }
 
