@@ -1,5 +1,16 @@
 import { clearEditor } from "./editor/editor.js"
 import { setEditorText } from "./editor/editor-utils.js"
+import {
+    PAGE_EDITOR__ACTIVE,
+    PAGE_EXPLORER__ACTIVE,
+    EDITOR__DISABLED,
+    EXPLORER__DISABLED,
+    EXPLORER_TITLE_ARROW__DISABLED,
+    EXPLORER_FILES__DISABLED,
+    FOLDER__DISABLED,
+    FILE__ACTIVE,
+    FILES_BUTTON__ACTIVE,
+} from "./selectors.js"
 import { helloText, someText, someText2 } from "./editor/text-data.js"
 
 const DEFAULT_FILE_NAME = 'hello.txt'
@@ -13,36 +24,37 @@ export function initExplorer(explorer, relatedElements) {
             fileBlock: explorer.querySelector('#explorer-files')
         }
 
+        // hide explorer and set full-size editor
         const showExplorer = () => {
             relatedElements
                 .filesButton
                 .classList
-                .toggle('sidebar-button--active')
+                .toggle(FILES_BUTTON__ACTIVE)
             relatedElements
                 .pageContent
                 .classList
-                .add('page__content--editor-full')
+                .add(PAGE_EDITOR__ACTIVE)
             relatedElements
                 .pageContent
                 .classList
-                .remove('page__content--explorer-full')
+                .remove(PAGE_EXPLORER__ACTIVE)
             relatedElements
                 .editor
                 .classList
-                .toggle('editor--hidden')
-            explorer.classList.toggle('explorer--hidden')
+                .toggle(EDITOR__DISABLED)
+            explorer.classList.toggle(EXPLORER__DISABLED)
         }
 
         // handlers
         const titleClickHandler = () => {
-            explorerElements.title.classList.toggle('explorer-title-block--collapsed')
-            explorerElements.fileBlock.classList.toggle('explorer-files--hidden')
+            explorerElements.title.classList.toggle(EXPLORER_TITLE_ARROW__DISABLED)
+            explorerElements.fileBlock.classList.toggle(EXPLORER_FILES__DISABLED)
         }
 
         const collapseClickHandler = (e) => {
             e.stopPropagation()
             const folders = explorerElements.fileBlock.querySelectorAll('.folder')
-            folders.forEach(folder => folder.classList.add('folder--collapsed'))
+            folders.forEach(folder => folder.classList.add(FOLDER__DISABLED))
         }
 
         const fileClickHandler = (e) => {
@@ -51,12 +63,12 @@ export function initExplorer(explorer, relatedElements) {
 
             if (titleBlock) {
                 const folder = titleBlock.closest('.folder')
-                folder.classList.toggle('folder--collapsed')
+                folder.classList.toggle(FOLDER__DISABLED)
             }
 
             if (file) {
-                document.querySelectorAll('.file').forEach(file => file.classList.remove('file--selected'))
-                file.classList.toggle('file--selected')
+                document.querySelectorAll('.file').forEach(file => file.classList.remove(FILE__ACTIVE))
+                file.classList.toggle(FILE__ACTIVE)
 
                 const fileName = file.querySelector('.file__title')?.textContent.trim()
 
