@@ -3,9 +3,11 @@ import { setCusorInfo, setEditorText } from "./editor-utils.js"
 const ITEM_CLASS = 'line-counter__number'
 let count = 0
 let countClicks = 0
+let editor = null
 
-export const initEditor = (editor) => {
+export const initEditor = (editorElement) => {
     const counter = document.getElementById('counter')
+    editor = editorElement
 
     if (editor && counter) {
         editor.addEventListener('input', (e) => {

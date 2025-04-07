@@ -16,6 +16,7 @@ function initApp() {
     // general elements
     const editor = document.getElementById('editor')
     const explorer = document.getElementById('explorer')
+
     // elements
     const page = document.getElementById('page')
     const icon = document.getElementById('icon')
@@ -24,12 +25,13 @@ function initApp() {
     const editorTextArea = editor.querySelector('#text-area')
     const explorerRelatedElements = {
         pageContent,
-        filesButton
+        filesButton,
+        editor
     }
 
     if (window.isMobile) {
         filesButton.classList.remove('sidebar-button--active')
-        toggleExplorer(true)
+        setContentByMobile(true)
     }
 
     initEditor(editorTextArea)
@@ -41,7 +43,7 @@ function initApp() {
         icon.removeEventListener('click', iconClickHandler)
     }
 
-    const showExplorerHandler = () => { // check is duplicate
+    const showExplorerHandler = () => {
         filesButton.classList.toggle('sidebar-button--active')
         if (window.isMobile) {
             explorer.classList.toggle('explorer--hidden')
@@ -55,7 +57,7 @@ function initApp() {
 
     const resizeHandler = () => {
         window.isMobile = checkIsMobile()
-        toggleExplorer(window.isMobile)
+        setContentByMobile(window.isMobile)
     }
 
     // set listeners
@@ -63,13 +65,16 @@ function initApp() {
     filesButton.addEventListener('click', showExplorerHandler)
     icon.addEventListener('click', iconClickHandler)
 
-    function toggleExplorer(isMobile) { // finish
+    function setContentByMobile(isMobile) {
         if (isMobile) {
+            filesButton.classList.remove('sidebar-button--active')
             pageContent.classList.add('page__content--editor-full')
             explorer.classList.add('explorer--hidden')
         } else {
             pageContent.classList.remove('page__content--editor-full')
+            pageContent.classList.remove('page__content--explorer-full')
             explorer.classList.remove('explorer--hidden')
+            filesButton.classList.add('sidebar-button--active')
         }
     }
 }
