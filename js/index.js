@@ -2,6 +2,13 @@ import { setEditorText } from "./editor/editor-utils.js";
 import { initEditor } from "./editor/editor.js";
 import { easterEggText, helloText } from "./editor/text-data.js";
 import { initExplorer } from "./explorer.js";
+import {
+    PAGE_EDITOR__ACTIVE,
+    PAGE_EXPLORER__ACTIVE,
+    EXPLORER__DISABLED,
+    EDITOR__DISABLED,
+    FILES_BUTTON__ACTIVE,
+} from "./selectors.js";
 
 main()
 
@@ -11,30 +18,28 @@ function main() {
 }
 
 function initApp() {
-    window.isMobile = checkIsMobile()
-
     // general elements
     const editor = document.getElementById('editor')
     const explorer = document.getElementById('explorer')
-
     // elements
     const page = document.getElementById('page')
     const icon = document.getElementById('icon')
     const pageContent = page.firstElementChild
     const filesButton = document.getElementById('files')
     const editorTextArea = editor.querySelector('#text-area')
+
+    window.isMobile = checkIsMobile()
+    if (window.isMobile) {
+        setContentByMobile(true)
+    }
+
+    initEditor(editorTextArea)
+
     const explorerRelatedElements = {
         pageContent,
         filesButton,
         editor
     }
-
-    if (window.isMobile) {
-        filesButton.classList.remove('sidebar-button--active')
-        setContentByMobile(true)
-    }
-
-    initEditor(editorTextArea)
     initExplorer(explorer, explorerRelatedElements)
 
     // handlers
@@ -44,14 +49,14 @@ function initApp() {
     }
 
     const showExplorerHandler = () => {
-        filesButton.classList.toggle('sidebar-button--active')
+        filesButton.classList.toggle(FILES_BUTTON__ACTIVE)
         if (window.isMobile) {
-            explorer.classList.toggle('explorer--hidden')
-            editor.classList.toggle('editor--hidden')
-            pageContent.classList.toggle('page__content--explorer-full')
+            explorer.classList.toggle(EXPLORER__DISABLED)
+            editor.classList.toggle(EDITOR__DISABLED)
+            pageContent.classList.toggle(PAGE_EXPLORER__ACTIVE)
         } else {
-            explorer.classList.toggle('explorer--hidden')
-            pageContent.classList.toggle('page__content--editor-full')
+            explorer.classList.toggle(EXPLORER__DISABLED)
+            pageContent.classList.toggle(PAGE_EDITOR__ACTIVE)
         }
     }
 
@@ -65,25 +70,28 @@ function initApp() {
     filesButton.addEventListener('click', showExplorerHandler)
     icon.addEventListener('click', iconClickHandler)
 
+    // set behavior for explorer by window size
     function setContentByMobile(isMobile) {
         if (isMobile) {
-            filesButton.classList.remove('sidebar-button--active')
-            pageContent.classList.add('page__content--editor-full')
-            explorer.classList.add('explorer--hidden')
+            // set full-size text area by default
+            filesButton.classList.remove(FILES_BUTTON__ACTIVE)
+            pageContent.classList.add(PAGE_EDITOR__ACTIVE)
+            explorer.classList.add(EXPLORER__DISABLED)
         } else {
-            pageContent.classList.remove('page__content--editor-full')
-            pageContent.classList.remove('page__content--explorer-full')
-            explorer.classList.remove('explorer--hidden')
-            filesButton.classList.add('sidebar-button--active')
+            // back to desktop page config (default config)
+            pageContent.classList.remove(PAGE_EDITOR__ACTIVE)
+            pageContent.classList.remove(PAGE_EXPLORER__ACTIVE)
+            explorer.classList.remove(EXPLORER__DISABLED)
+            filesButton.classList.add(FILES_BUTTON__ACTIVE)
         }
     }
 }
 
 function checkIsMobile() {
-    const SMALL = 480
+    const SMALL_WIDTH = 480
     const width = window.innerWidth
 
-    if (width <= 480) {
+    if (width <= SMALL_WIDTH) {
         return true
     }
 
