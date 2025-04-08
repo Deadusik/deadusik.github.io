@@ -12,6 +12,7 @@ import {
     FILES_BUTTON__ACTIVE,
 } from "./selectors.js"
 import { helloText, someText, someText2 } from "./editor/text-data.js"
+import { setTabContent } from "./tab.js"
 
 const DEFAULT_FILE_NAME = 'hello.txt'
 let previousFileName = DEFAULT_FILE_NAME
@@ -92,21 +93,19 @@ function setEditorContent(fileName) {
         case 'hello.txt': {
             clearEditor()
             setEditorText(helloText, 10)
-            break
-        }
-        case 'main info.txt': {
-            clearEditor()
-            setEditorText(someText, 10)
+            setTabContent('hello.txt', "'🖐'")
             break
         }
         case 'projects info.txt': {
             clearEditor()
             setEditorText(someText2, 10)
+            setTabContent('projects info.txt', '"✍️"')
             break
         }
         default: {
             clearEditor()
             setEditorText('file name not found', 10)
+            setTabContent('undefined', '"🚫"')
         }
     }
 }

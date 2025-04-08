@@ -1,7 +1,8 @@
-import { setEditorText } from "./editor/editor-utils.js";
 import { initEditor } from "./editor/editor.js";
-import { easterEggText, helloText } from "./editor/text-data.js";
 import { initExplorer } from "./explorer.js";
+import { setEditorText } from "./editor/editor-utils.js";
+import { easterEggText, helloText } from "./editor/text-data.js";
+
 import {
     PAGE_EDITOR__ACTIVE,
     PAGE_EXPLORER__ACTIVE,
@@ -14,7 +15,7 @@ main()
 
 function main() {
     initApp()
-    setEditorText(helloText, 10)
+    setEditorText(helloText, 5)
 }
 
 function initApp() {

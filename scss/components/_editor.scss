@@ -16,7 +16,7 @@ $editor-line-height: 1.3;
     &__text-area-block {
         width: 100%;
         display: flex;
-        margin-top: 5px;
+        padding-top: 5px;
     }
 
     &__text-area {
@@ -48,6 +48,24 @@ $editor-line-height: 1.3;
     &--hidden {
         display: none;
     }
+
+    span {
+        color: colors.$span;
+    }
+
+    a {
+        color: colors.$link;
+        font-weight: bold;
+    }
+
+    strong {
+        color: colors.$strong;
+        font-weight: 600;
+    }
+
+    em {
+        color: colors.$em
+    }
 }
 
 .line-counter {
@@ -55,7 +73,6 @@ $editor-line-height: 1.3;
     flex-direction: column;
     align-items: end;
     width: 75px;
-    //background-color: black;
     padding: 0 15px;
     line-height: $editor-line-height;
 
