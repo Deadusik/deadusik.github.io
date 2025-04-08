@@ -1,3 +1,4 @@
+@charset "UTF-8";
 ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
@@ -392,7 +393,7 @@ h6 {
 .editor__text-area-block {
   width: 100%;
   display: flex;
-  margin-top: 5px;
+  padding-top: 5px;
 }
 .editor__text-area {
   height: 100%;
@@ -442,6 +443,7 @@ h6 {
 }
 
 .file-tab {
+  --icon: "🖐";
   display: inline-flex;
   align-items: center;
   padding-right: 20px;
@@ -458,15 +460,13 @@ h6 {
   position: relative;
 }
 .file-tab__title::before {
-  content: "";
+  content: var(--icon);
   position: absolute;
-  background-image: url("../assets/vs.svg");
   width: 15px;
   height: 15px;
   background-size: cover;
   left: -20px;
   top: 0px;
-  transform: rotate(90deg);
 }
 
 .file {
@@ -476,19 +476,16 @@ h6 {
   padding: 5px;
   padding-left: 65px;
 }
-.file__title {
+.file__title-block {
   position: relative;
 }
-.file__title::before {
-  content: "";
+.file__symbol {
   position: absolute;
-  background-image: url("../assets/vs.svg");
   width: 15px;
   height: 15px;
   background-size: cover;
   left: -20px;
   top: 0px;
-  transform: rotate(90deg);
 }
 .file:hover {
   cursor: pointer;

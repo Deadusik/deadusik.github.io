@@ -8,20 +8,19 @@
         padding-left: 65px;
     }
 
-    &__title {
+    &__title-block {
         position: relative;
+    }
 
-        &::before {
-            content: "";
-            position: absolute;
-            background-image: url('../assets/vs.svg');
-            width: 15px;
-            height: 15px;
-            background-size: cover;
-            left: -20px;
-            top: 0px;
-            transform: rotate(90deg);
-        }
+    &__title {}
+
+    &__symbol {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background-size: cover;
+        left: -20px;
+        top: 0px;
     }
 
     &:hover {

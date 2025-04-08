@@ -1,6 +1,8 @@
 @use 'colors' as colors;
 
 .file-tab {
+    --icon: "🖐";
+
     display: inline-flex;
     align-items: center;
     padding-right: 20px;
@@ -17,15 +19,13 @@
         position: relative;
 
         &::before {
-            content: "";
+            content: var(--icon);
             position: absolute;
-            background-image: url('../assets/vs.svg');
             width: 15px;
             height: 15px;
             background-size: cover;
             left: -20px;
             top: 0px;
-            transform: rotate(90deg);
         }
     }
 }
