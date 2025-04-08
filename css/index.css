@@ -420,6 +420,20 @@ h6 {
 .editor--hidden {
   display: none;
 }
+.editor span {
+  color: #6a9955;
+}
+.editor a {
+  color: #0078d4;
+  font-weight: bold;
+}
+.editor strong {
+  color: #cbab6b;
+  font-weight: 600;
+}
+.editor em {
+  color: #d4d4d4;
+}
 
 .line-counter {
   display: flex;

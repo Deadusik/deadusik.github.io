@@ -48,6 +48,24 @@ $editor-line-height: 1.3;
     &--hidden {
         display: none;
     }
+
+    span {
+        color: colors.$span;
+    }
+
+    a {
+        color: colors.$link;
+        font-weight: bold;
+    }
+
+    strong {
+        color: colors.$strong;
+        font-weight: 600;
+    }
+
+    em {
+        color: colors.$em
+    }
 }
 
 .line-counter {

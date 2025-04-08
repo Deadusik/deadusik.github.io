@@ -12,11 +12,10 @@ import {
     FILES_BUTTON__ACTIVE,
 } from "./selectors.js"
 import { helloText, someText, someText2 } from "./editor/text-data.js"
+import { setTabContent } from "./tab.js"
 
 const DEFAULT_FILE_NAME = 'hello.txt'
 let previousFileName = DEFAULT_FILE_NAME
-const tab = document.getElementById('tab')
-const tabTitle = tab.querySelector('h3')
 
 export function initExplorer(explorer, relatedElements) {
     if (explorer) {
@@ -94,21 +93,19 @@ function setEditorContent(fileName) {
         case 'hello.txt': {
             clearEditor()
             setEditorText(helloText, 10)
-            tabTitle.textContent = 'hello.txt'
-            tabTitle.style.setProperty('--icon', '"🖐"')
+            setTabContent('hello.txt', "'🖐'")
             break
         }
         case 'projects info.txt': {
             clearEditor()
             setEditorText(someText2, 10)
-            tabTitle.textContent = 'projects info.txt'
-            tabTitle.style.setProperty('--icon', '"✍️"')
+            setTabContent('projects info.txt', '"✍️"')
             break
         }
         default: {
             clearEditor()
             setEditorText('file name not found', 10)
-            tabTitle.textContent = 'undefined'
+            setTabContent('undefined', '"🚫"')
         }
     }
 }
