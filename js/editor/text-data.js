@@ -1,17 +1,21 @@
-export const helloText = `Hi, my name is [Name]
+export const helloText = `<i>&lt;</i><code>hello</code><i>&gt;</i>
 
-I'm a web application developer, primarily working with the React library
+My name is <mark>[Name]</mark>
 
-I'm also capable of building web apps using vanilla JavaScript 
+I'm a <mark>web application developer</mark>, primarily working with the <mark>React library</mark> ⚛️
+
+I'm also capable of building web apps using <mark>vanilla JavaScript</mark> 
 for example, like this resume
 
-Here, I used plain <strong>HTML</strong> and <strong>JavaScript</strong>
-For styling, I applied the <strong>SCSS</strong> preprocessor, 
-and used <strong>GULP</strong> to automate SCSS-to-CSS compilation
-To keep things organized, I followed <strong>the BEM methodology</strong> 
+<span>&lt;!-- side note: any resemblance to VS Code is purely coincidental 😇 --&gt; </span>
+
+Here, I used plain <mark>HTML</mark> and <mark>JavaScript</mark>
+For styling, I applied the <mark>SCSS</mark> preprocessor, 
+and used <mark>GULP</mark> to automate SCSS-to-CSS compilation
+To keep things organized, I followed <mark>the BEM methodology</mark> 
 for naming CSS classes
 
-If you're interested, you can check out the project/resume on GitHub here:
+If you're <mark>interested</mark>, you can check out the <mark>project/resume</mark> on <mark>GitHub</mark> here:
 
 <a href='https://github.com/Deadusik/deadusik.github.io.git' target="_blank" rel="noopener noreferrer">➥ GitHub Resume Project</a>
 
@@ -29,7 +33,27 @@ If you're interested, you can check out the project/resume on GitHub here:
 <em>Tailwind, Bootstrap, Formik, MobX, Firebase</em>
 
 If I’ve caught your interest, 
-feel free to explore more info in the sidebar on the left`
+feel free to explore more info in the sidebar on the left
+
+<i>&lt;/</i><code>hello</code><i>&gt;</i>`
+
+export const contactsText = `<i>&lt;</i><code>contacts</code><i>&gt;</i>
+    <i>&lt;</i><code>github</code><i>&gt;</i>
+
+        <img src='../../assets/social/github.svg' width='25' height='25'> <a href='https://github.com/Deadusik' target="_blank" rel="noopener noreferrer">GitHub</a>
+
+    <i>&lt;/</i><code>github</code><i>&gt;</i>
+    <i>&lt;</i><code>linkedin</code><i>&gt;</i>
+
+        <img src='../../assets/social/linkedin.svg' width='25' height='25'> <a href='https://www.linkedin.com/in/deadusik/' target="_blank" rel="noopener noreferrer">Linkedin</a>
+
+    <i>&lt;</i><code>linkedin</code><i>&gt;</i>
+    <i>&lt;/</i><code>telegram</code><i>&gt;</i>
+
+        <img src='../../assets/social/telegram.svg' width='25' height='25'> <a href='@deadusik' target="_blank" rel="noopener noreferrer">@deadusik</a>
+
+    <i>&lt;/</i><code>telegram</code><i>&gt;</i>
+<i>&lt;/</i><code>contacts</code><i>&gt;</i>`
 
 export const someText = `Hello, my name is Someone, 
 I'm 24 years old

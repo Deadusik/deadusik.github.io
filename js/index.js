@@ -15,15 +15,15 @@ main()
 
 function main() {
     initApp()
-    setEditorText(helloText, 5)
+    setEditorText(helloText, 1)
 }
 
 function initApp() {
     // general elements
+    const page = document.getElementById('page')
     const editor = document.getElementById('editor')
     const explorer = document.getElementById('explorer')
     // elements
-    const page = document.getElementById('page')
     const icon = document.getElementById('icon')
     const pageContent = page.firstElementChild
     const filesButton = document.getElementById('files')
@@ -44,11 +44,7 @@ function initApp() {
     initExplorer(explorer, explorerRelatedElements)
 
     // handlers
-    const iconClickHandler = () => {
-        setEditorText(easterEggText, 2)
-        icon.removeEventListener('click', iconClickHandler)
-    }
-
+    // toggle explorer visibility
     const showExplorerHandler = () => {
         filesButton.classList.toggle(FILES_BUTTON__ACTIVE)
         if (window.isMobile) {
@@ -66,12 +62,17 @@ function initApp() {
         setContentByMobile(window.isMobile)
     }
 
+    const iconClickHandler = () => {
+        setEditorText(easterEggText, 2)
+        icon.removeEventListener('click', iconClickHandler)
+    }
+
     // set listeners
     window.addEventListener('resize', resizeHandler)
     filesButton.addEventListener('click', showExplorerHandler)
     icon.addEventListener('click', iconClickHandler)
 
-    // set behavior for explorer by window size
+    // set explorer behavior by window size
     function setContentByMobile(isMobile) {
         if (isMobile) {
             // set full-size text area by default
@@ -88,8 +89,8 @@ function initApp() {
     }
 }
 
-function checkIsMobile() {
-    const SMALL_WIDTH = 480
+export function checkIsMobile() {
+    const SMALL_WIDTH = 960
     const width = window.innerWidth
 
     if (width <= SMALL_WIDTH) {

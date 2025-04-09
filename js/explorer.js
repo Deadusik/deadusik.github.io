@@ -11,7 +11,7 @@ import {
     FILE__ACTIVE,
     FILES_BUTTON__ACTIVE,
 } from "./selectors.js"
-import { helloText, someText, someText2 } from "./editor/text-data.js"
+import { contactsText, helloText, someText, someText2 } from "./editor/text-data.js"
 import { setTabContent } from "./tab.js"
 
 const DEFAULT_FILE_NAME = 'hello.txt'
@@ -89,17 +89,29 @@ export function initExplorer(explorer, relatedElements) {
 }
 
 function setEditorContent(fileName) {
+    const files = {
+        hello: 'hello.html',
+        contacts: 'contacts.html',
+        projects: 'projects info.html'
+    }
+
     switch (fileName) {
-        case 'hello.txt': {
+        case files.hello: {
             clearEditor()
             setEditorText(helloText, 10)
-            setTabContent('hello.txt', "'🖐'")
+            setTabContent(files.hello, "'🖐'")
             break
         }
-        case 'projects info.txt': {
+        case files.contacts: {
+            clearEditor()
+            setEditorText(contactsText, 10)
+            setTabContent(files.contacts, '"✍️"')
+            break
+        }
+        case files.projects: {
             clearEditor()
             setEditorText(someText2, 10)
-            setTabContent('projects info.txt', '"✍️"')
+            setTabContent(files.projects, '"✍️"')
             break
         }
         default: {
