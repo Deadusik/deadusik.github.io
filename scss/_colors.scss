@@ -5,10 +5,6 @@ $bg-light: #2a2a2a;
 //border
 $block-border: #2b2b2b;
 $block-border-light: #454545;
-// text
-$text-gray: #cccccc;
-$text-dark-gray: #6e7681;
-$text-editor: #4cc1f2;
 //scroll
 $bar: #888;
 $active-bar: #a1a1a1;
@@ -16,8 +12,15 @@ $active-bar: #a1a1a1;
 $close: #e81123;
 $hover-dark: #37373d;
 $line-blue: #0078d4;
-// editor text 
+// text
+$text-gray: #cccccc;
+$text-dark-gray: #6e7681;
+// editor
+$text-editor: #89ceec; //color: #89ceec; #4cc1f2
 $span: #6a9955;
 $link: #0078d4;
-$strong: #cbab6b;
-$em: #d4d4d4;
+$strong: #d0cf97;
+$em: #4cc1f2;
+$mark: #d0cf97;
+$i: #808080;
+$code: #4cc1f2;
