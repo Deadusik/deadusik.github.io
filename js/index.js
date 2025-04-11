@@ -1,8 +1,8 @@
 import { initEditor } from "./editor/editor.js";
 import { initExplorer } from "./explorer.js";
-import { setEditorText } from "./editor/editor-utils.js";
-import { easterEggText, helloText } from "./editor/text-data.js";
-
+import { writeEditorText } from "./editor/editor-utils.js";
+import { easterEggText } from "./editor/text-data.js";
+import { checkIsMobile, getFileTextByMobile } from "./utils.js";
 import {
     PAGE_EDITOR__ACTIVE,
     PAGE_EXPLORER__ACTIVE,
@@ -10,12 +10,15 @@ import {
     EDITOR__DISABLED,
     FILES_BUTTON__ACTIVE,
 } from "./selectors.js";
+import { helloFile } from "./editor/files.js";
+
 
 main()
 
 function main() {
     initApp()
-    setEditorText(helloText, 1)
+    const adaptiveText = getFileTextByMobile(helloFile)
+    writeEditorText(adaptiveText, 1)
 }
 
 function initApp() {
@@ -89,13 +92,3 @@ function initApp() {
     }
 }
 
-export function checkIsMobile() {
-    const SMALL_WIDTH = 960
-    const width = window.innerWidth
-
-    if (width <= SMALL_WIDTH) {
-        return true
-    }
-
-    return false
-}

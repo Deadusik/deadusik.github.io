@@ -1,5 +1,5 @@
 import { clearEditor } from "./editor/editor.js"
-import { setEditorText } from "./editor/editor-utils.js"
+import { setNewEditorText, writeEditorText } from "./editor/editor-utils.js"
 import {
     PAGE_EDITOR__ACTIVE,
     PAGE_EXPLORER__ACTIVE,
@@ -11,8 +11,10 @@ import {
     FILE__ACTIVE,
     FILES_BUTTON__ACTIVE,
 } from "./selectors.js"
-import { contactsText, helloText, someText, someText2 } from "./editor/text-data.js"
+import { someText2 } from "./editor/text-data.js"
 import { setTabContent } from "./tab.js"
+import { contactsFile, helloFile } from "./editor/files.js"
+import { getFileTextByMobile } from "./utils.js"
 
 const DEFAULT_FILE_NAME = 'hello.txt'
 let previousFileName = DEFAULT_FILE_NAME
@@ -89,34 +91,29 @@ export function initExplorer(explorer, relatedElements) {
 }
 
 function setEditorContent(fileName) {
-    const files = {
-        hello: 'hello.html',
-        contacts: 'contacts.html',
-        projects: 'projects info.html'
-    }
-
     switch (fileName) {
-        case files.hello: {
+        case helloFile.name: {
+            const adaptiveText = getFileTextByMobile(helloFile)
             clearEditor()
-            setEditorText(helloText, 10)
-            setTabContent(files.hello, "'🖐'")
+            writeEditorText(adaptiveText, 1)
+            setTabContent(helloFile.name, "'🖐'")
             break
         }
-        case files.contacts: {
-            clearEditor()
-            setEditorText(contactsText, 10)
-            setTabContent(files.contacts, '"✍️"')
+        case contactsFile.name: {
+            const adaptiveText = getFileTextByMobile(contactsFile)
+            setNewEditorText(adaptiveText)
+            setTabContent(contactsFile.name, '"✍️"')
             break
         }
         case files.projects: {
             clearEditor()
-            setEditorText(someText2, 10)
-            setTabContent(files.projects, '"✍️"')
+            writeEditorText(someText2, 1)
+            setTabContent('projects info.html', '"✍️"')
             break
         }
         default: {
             clearEditor()
-            setEditorText('file name not found', 10)
+            writeEditorText('file name not found', 1)
             setTabContent('undefined', '"🚫"')
         }
     }
