@@ -421,6 +421,11 @@ h6 {
 }
 @media (min-width: 480px) {
   .editor {
+    font-size: 16px;
+  }
+}
+@media (min-width: 720px) {
+  .editor {
     font-size: 20px;
   }
 }
@@ -467,6 +472,21 @@ h6 {
 .line-counter__number {
   color: #6e7681;
   font-weight: 500;
+}
+
+.text-area-social-icon {
+  width: 17px;
+  height: auto;
+}
+@media (min-width: 480px) {
+  .text-area-social-icon {
+    width: 20px;
+  }
+}
+@media (min-width: 720px) {
+  .text-area-social-icon {
+    width: 25px;
+  }
 }
 
 .files-bar {
