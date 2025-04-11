@@ -1,26 +1,43 @@
 @use 'colors.scss';
+@use 'breakpoints' as bp;
 
 .file {
     width: 100%;
 
     &__content {
-        padding: 5px;
-        padding-left: 65px;
+        padding: 10px;
+        padding-left: 85px;
+
+        @include bp.md {
+            padding: 5px;
+            padding-left: 65px;
+        }
     }
 
     &__title-block {
         position: relative;
     }
 
-    &__title {}
+    &__title {
+        font-size: 20px;
+
+        @include bp.md {
+            font-size: 14px;
+        }
+    }
 
     &__symbol {
         position: absolute;
-        width: 15px;
-        height: 15px;
+        font-size: 20px;
         background-size: cover;
-        left: -20px;
+        left: -30px;
         top: 0px;
+
+        @include bp.md {
+            font-size: 14px;
+            left: -20px;
+            top: 0px;
+        }
     }
 
     &:hover {

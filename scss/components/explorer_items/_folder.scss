@@ -1,4 +1,5 @@
 @use 'colors.scss';
+@use 'breakpoints' as bp;
 
 .folder {
     width: 100%;
@@ -7,28 +8,47 @@
 
     &__title {
         position: relative;
+        font-size: 20px;
+
+        @include bp.md {
+            font-size: 14px;
+        }
 
         &::before {
             content: "";
             position: absolute;
             background-image: url('../assets/collapse-arrow.svg');
-            width: 15px;
-            height: 15px;
+            width: 20px;
+            height: 20px;
             background-size: cover;
-            left: -38px;
+            left: -50px;
             top: -1px;
             transform: rotate(270deg);
+
+            @include bp.md {
+                width: 15px;
+                height: 15px;
+                left: -38px;
+                top: -1px;
+            }
         }
 
         &::after {
             content: "";
             position: absolute;
             background-image: url('../assets/folder/folder-opened.svg');
-            width: 15px;
-            height: 15px;
+            width: 20px;
+            height: 20px;
             background-size: cover;
-            left: -20px;
+            left: -25px;
             top: 0px;
+
+            @include bp.md {
+                width: 15px;
+                height: 15px;
+                left: -20px;
+                top: 0px;
+            }
         }
     }
 
@@ -38,8 +58,13 @@
 
     &__title-block {
         width: 100%;
-        padding: 5px;
-        padding-left: 55px;
+        padding: 10px;
+        padding-left: 70px;
+
+        @include bp.md {
+            padding: 5px;
+            padding-left: 55px;
+        }
 
         &:hover {
             cursor: pointer;

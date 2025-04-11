@@ -326,12 +326,23 @@ h6 {
   align-items: center;
   position: relative;
   padding-top: 10px;
-  padding-left: 22px;
+  padding-left: 32px;
   padding-right: 5px;
+}
+@media (min-width: 720px) {
+  .explorer-title-block {
+    padding-left: 22px;
+  }
 }
 .explorer-title-block__title {
   color: #cccccc;
   font-weight: 600;
+  font-size: 18px;
+}
+@media (min-width: 720px) {
+  .explorer-title-block__title {
+    font-size: 16px;
+  }
 }
 .explorer-title-block__collapse-icon {
   width: 20px;
@@ -341,12 +352,19 @@ h6 {
   content: "";
   position: absolute;
   background-image: url("../assets/collapse-arrow.svg");
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   background-size: cover;
-  left: 3px;
+  left: 9px;
   top: 13px;
   transform: rotate(270deg);
+}
+@media (min-width: 720px) {
+  .explorer-title-block::before {
+    width: 15px;
+    height: 15px;
+    left: 3px;
+  }
 }
 .explorer-title-block:hover {
   cursor: pointer;
@@ -361,11 +379,21 @@ h6 {
 .explorer-collapse-button {
   padding: 1px;
   background-color: transparent;
-  visibility: hidden;
+}
+@media (min-width: 720px) {
+  .explorer-collapse-button {
+    visibility: hidden;
+  }
 }
 .explorer-collapse-button__icon {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
+}
+@media (min-width: 720px) {
+  .explorer-collapse-button__icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 .explorer-collapse-button:hover {
   background-color: #37373d;
@@ -528,19 +556,39 @@ h6 {
   width: 100%;
 }
 .file__content {
-  padding: 5px;
-  padding-left: 65px;
+  padding: 10px;
+  padding-left: 85px;
+}
+@media (min-width: 720px) {
+  .file__content {
+    padding: 5px;
+    padding-left: 65px;
+  }
 }
 .file__title-block {
   position: relative;
 }
+.file__title {
+  font-size: 20px;
+}
+@media (min-width: 720px) {
+  .file__title {
+    font-size: 14px;
+  }
+}
 .file__symbol {
   position: absolute;
-  width: 15px;
-  height: 15px;
+  font-size: 20px;
   background-size: cover;
-  left: -20px;
+  left: -30px;
   top: 0px;
+}
+@media (min-width: 720px) {
+  .file__symbol {
+    font-size: 14px;
+    left: -20px;
+    top: 0px;
+  }
 }
 .file:hover {
   cursor: pointer;
@@ -555,32 +603,60 @@ h6 {
 }
 .folder__title {
   position: relative;
+  font-size: 20px;
+}
+@media (min-width: 720px) {
+  .folder__title {
+    font-size: 14px;
+  }
 }
 .folder__title::before {
   content: "";
   position: absolute;
   background-image: url("../assets/collapse-arrow.svg");
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   background-size: cover;
-  left: -38px;
+  left: -50px;
   top: -1px;
   transform: rotate(270deg);
+}
+@media (min-width: 720px) {
+  .folder__title::before {
+    width: 15px;
+    height: 15px;
+    left: -38px;
+    top: -1px;
+  }
 }
 .folder__title::after {
   content: "";
   position: absolute;
   background-image: url("../assets/folder/folder-opened.svg");
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   background-size: cover;
-  left: -20px;
+  left: -25px;
   top: 0px;
+}
+@media (min-width: 720px) {
+  .folder__title::after {
+    width: 15px;
+    height: 15px;
+    left: -20px;
+    top: 0px;
+  }
 }
 .folder__title-block {
   width: 100%;
-  padding: 5px;
-  padding-left: 55px;
+  padding: 10px;
+  padding-left: 70px;
+}
+@media (min-width: 720px) {
+  .folder__title-block {
+    padding: 5px;
+    padding-left: 55px;
+  }
 }
 .folder__title-block:hover {
   cursor: pointer;
