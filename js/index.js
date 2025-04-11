@@ -66,7 +66,7 @@ function initApp() {
     }
 
     const iconClickHandler = () => {
-        setEditorText(easterEggText, 2)
+        writeEditorText(easterEggText, 2)
         icon.removeEventListener('click', iconClickHandler)
     }
 

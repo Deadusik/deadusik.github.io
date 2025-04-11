@@ -102,7 +102,7 @@ function setEditorContent(fileName) {
         case contactsFile.name: {
             const adaptiveText = getFileTextByMobile(contactsFile)
             setNewEditorText(adaptiveText)
-            setTabContent(contactsFile.name, '"✍️"')
+            setTabContent(contactsFile.name, '"📞"')
             break
         }
         case files.projects: {
