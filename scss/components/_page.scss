@@ -25,6 +25,10 @@
                 "sidebar explorer editor"
                 "footer footer footer";
         }
+
+        &--preload {
+            visibility: hidden;
+        }
     }
 
     &__content--editor-full {

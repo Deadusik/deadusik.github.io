@@ -9,6 +9,7 @@ import {
     EXPLORER__DISABLED,
     EDITOR__DISABLED,
     FILES_BUTTON__ACTIVE,
+    PAGE_CONTENT_PRELOAD,
 } from "./selectors.js";
 import { helloFile } from "./editor/files.js";
 
@@ -36,6 +37,9 @@ function initApp() {
     if (window.isMobile) {
         setContentByMobile(true)
     }
+    // set mobile or desctop layout, 
+    // then show page content
+    pageContent.classList.remove(PAGE_CONTENT_PRELOAD)
 
     initEditor(editorTextArea)
 
