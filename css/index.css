@@ -127,6 +127,7 @@ h6 {
 .page {
   width: 100vw;
   height: 100vh;
+  max-height: 100vh;
   background-color: #1f1f1f;
   overflow: hidden;
 }
