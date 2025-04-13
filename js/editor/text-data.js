@@ -108,24 +108,63 @@ export const contactsText = {
 <i>&lt;/</i><code>contacts</code><i>&gt;</i>`,
 }
 
-export const someText = `Hello, my name is Someone, 
-I'm 24 years old
-I like cycling 
-and coding evry day :)
+// projects info 
 
-<a href="https://google.com">Link</a>
+export const readmeText = `This folder contains my main pet projects.
+The sequence starts with 
+my very first project on GitHub
+and ends with the latest one.
 
-I'm 24 years old
-I like cycling 
-and coding evry day :)`
+Enjoy browsing 🫡`
 
-export const someText2 = `Now I will tell you
-a little bit about 
-my project
+export const berlinByFoodText = {
+    lg: `<i>&lt;</i><code>berlinbyfood</code><i>&gt;</i>
 
-first prjects is something 
-it's very intresting 
-bla bla bla`
+This is my <mark>first</mark> web project on <mark>GitHub</mark> 
+It’s a <mark>simple landing page</mark> for a themed food tour event.
+
+In this project, 
+I was <mark>learning</mark> how to use the <mark>SCSS preprocessor</mark>,
+and I also tried <mark>basic responsiveness</mark>
+to make the page look decent on different screen sizes.
+
+You can <mark>check out</mark> the project on <mark>GitHub</mark> here:
+
+<a href='https://github.com/Deadusik/BerlinByFood.git' target="_blank" rel="noopener noreferrer">➥ GitHub BerlinByFood</a>
+
+A static <mark>preview</mark> of the page is <mark>available</mark> here:
+
+<a href='https://deadusik.github.io/BerlinByFood' target="_blank" rel="noopener noreferrer">➥ GitHub Pages 👀</a>
+
+<i>&lt;/</i><code>berlinbyfood</code><i>&gt;</i>`,
+    // md text size
+    md: `<i>&lt;</i><code>berlinbyfood</code><i>&gt;</i>
+
+This is my <mark>first</mark> web project on <mark>GitHub</mark> 
+It’s a <mark>simple landing page</mark> 
+for a themed food tour event.
+
+In this project, 
+I was <mark>learning</mark> 
+how to use the <mark>SCSS preprocessor</mark>,
+and I also tried <mark>basic responsiveness</mark>
+to make the page look decent 
+on different screen sizes.
+
+You can <mark>check out</mark> 
+the project on <mark>GitHub</mark> here:
+
+<a href='https://github.com/Deadusik/BerlinByFood.git' target="_blank" rel="noopener noreferrer">➥ GitHub BerlinByFood</a>
+
+A static <mark>preview</mark> 
+of the page is <mark>available</mark> here:
+
+<a href='https://deadusik.github.io/BerlinByFood' target="_blank" rel="noopener noreferrer">➥ GitHub Pages 👀</a>
+
+<i>&lt;/</i><code>berlinbyfood</code><i>&gt;</i>`
+}
+
+// other
 
 export const easterEggText = `
 

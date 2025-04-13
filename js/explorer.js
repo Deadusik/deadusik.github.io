@@ -11,12 +11,11 @@ import {
     FILE__ACTIVE,
     FILES_BUTTON__ACTIVE,
 } from "./selectors.js"
-import { someText2 } from "./editor/text-data.js"
 import { setTabContent } from "./tab.js"
-import { contactsFile, helloFile } from "./editor/files.js"
+import { berlinByFoodFile, contactsFile, helloFile, readmeFile } from "./editor/files.js"
 import { getFileTextByMobile } from "./utils.js"
 
-const DEFAULT_FILE_NAME = 'hello.txt'
+const DEFAULT_FILE_NAME = helloFile.name
 let previousFileName = DEFAULT_FILE_NAME
 
 export function initExplorer(explorer, relatedElements) {
@@ -91,24 +90,33 @@ export function initExplorer(explorer, relatedElements) {
 }
 
 function setEditorContent(fileName) {
+    let adaptiveText = ''
+
     switch (fileName) {
         case helloFile.name: {
-            const adaptiveText = getFileTextByMobile(helloFile)
+            adaptiveText = getFileTextByMobile(helloFile)
             clearEditor()
             writeEditorText(adaptiveText, 1)
             setTabContent(helloFile.name, "'🖐'")
             break
         }
         case contactsFile.name: {
-            const adaptiveText = getFileTextByMobile(contactsFile)
+            adaptiveText = getFileTextByMobile(contactsFile)
             setNewEditorText(adaptiveText)
             setTabContent(contactsFile.name, '"📞"')
             break
         }
-        case files.projects: {
+        case readmeFile.name: {
             clearEditor()
-            writeEditorText(someText2, 1)
-            setTabContent('projects info.html', '"✍️"')
+            writeEditorText(readmeFile.text, 1)
+            setTabContent(readmeFile.name, '"👀"')
+            break
+        }
+        case berlinByFoodFile.name: {
+            adaptiveText = getFileTextByMobile(berlinByFoodFile)
+            clearEditor()
+            writeEditorText(adaptiveText, 1)
+            setTabContent(berlinByFoodFile.name, '"🍺"')
             break
         }
         default: {
