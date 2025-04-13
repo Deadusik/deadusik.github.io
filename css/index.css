@@ -144,6 +144,9 @@ h6 {
     grid-template-areas: "navbar navbar navbar" "sidebar explorer editor" "footer footer footer";
   }
 }
+.page__content--preload {
+  visibility: hidden;
+}
 .page__content--editor-full {
   grid-template-areas: "navbar navbar navbar" "sidebar editor editor" "footer footer footer";
 }

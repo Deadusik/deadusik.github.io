@@ -1,6 +1,7 @@
 //page states
 export const PAGE_EDITOR__ACTIVE = 'page__content--editor-full'
 export const PAGE_EXPLORER__ACTIVE = 'page__content--explorer-full'
+export const PAGE_CONTENT_PRELOAD = 'page__content--preload'
 //editor states
 export const EDITOR__DISABLED = 'editor--hidden'
 //explorer states
