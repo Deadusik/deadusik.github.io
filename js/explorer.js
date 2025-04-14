@@ -12,7 +12,7 @@ import {
     FILES_BUTTON__ACTIVE,
 } from "./selectors.js"
 import { setTabContent } from "./tab.js"
-import { berlinByFoodFile, contactsFile, helloFile, readmeFile } from "./editor/files.js"
+import { befaArtFile, berlinByFoodFile, contactsFile, helloFile, irregularVerbsFile, lngCardsFile, prettyDocsFile, readmeFile, responsiveResumeFile, ticTacToeFile } from "./editor/files.js"
 import { getFileTextByMobile } from "./utils.js"
 
 const DEFAULT_FILE_NAME = helloFile.name
@@ -90,19 +90,13 @@ export function initExplorer(explorer, relatedElements) {
 }
 
 function setEditorContent(fileName) {
-    let adaptiveText = ''
-
     switch (fileName) {
         case helloFile.name: {
-            adaptiveText = getFileTextByMobile(helloFile)
-            clearEditor()
-            writeEditorText(adaptiveText, 1)
-            setTabContent(helloFile.name, "'🖐'")
+            writeNextTabInfo(helloFile, "'🖐'")
             break
         }
         case contactsFile.name: {
-            adaptiveText = getFileTextByMobile(contactsFile)
-            setNewEditorText(adaptiveText)
+            setNewEditorText(contactsFile.text)
             setTabContent(contactsFile.name, '"📞"')
             break
         }
@@ -113,10 +107,31 @@ function setEditorContent(fileName) {
             break
         }
         case berlinByFoodFile.name: {
-            adaptiveText = getFileTextByMobile(berlinByFoodFile)
-            clearEditor()
-            writeEditorText(adaptiveText, 1)
-            setTabContent(berlinByFoodFile.name, '"🍺"')
+            writeNextTabInfo(berlinByFoodFile, '"🍺"')
+            break
+        }
+        case responsiveResumeFile.name: {
+            writeNextTabInfo(responsiveResumeFile, '"📋"')
+            break
+        }
+        case prettyDocsFile.name: {
+            writeNextTabInfo(prettyDocsFile, '"📄"')
+            break
+        }
+        case befaArtFile.name: {
+            writeNextTabInfo(befaArtFile, '"🎨"')
+            break
+        }
+        case irregularVerbsFile.name: {
+            writeNextTabInfo(irregularVerbsFile, '"ℹ️"')
+            break
+        }
+        case ticTacToeFile.name: {
+            writeNextTabInfo(ticTacToeFile, '"❌"')
+            break
+        }
+        case lngCardsFile.name: {
+            writeNextTabInfo(lngCardsFile, '"🃏"')
             break
         }
         default: {
@@ -125,4 +140,11 @@ function setEditorContent(fileName) {
             setTabContent('undefined', '"🚫"')
         }
     }
+}
+
+function writeNextTabInfo(file, icon) {
+    const adaptiveText = getFileTextByMobile(file)
+    clearEditor()
+    writeEditorText(adaptiveText, 1)
+    setTabContent(file.name, icon)
 }
