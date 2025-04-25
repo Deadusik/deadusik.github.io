@@ -150,13 +150,13 @@ and I also tried <mark>basic responsiveness</mark>
 to make the page look decent 
 on different screen sizes.
 
-You can <mark>check out</mark> 
-the project on <mark>GitHub</mark> here:
+<em>You can <mark>check out</mark> 
+the project on <mark>GitHub</mark> here:</em>
 
 <a href='https://github.com/Deadusik/BerlinByFood.git' target="_blank" rel="noopener noreferrer">➥ GitHub BerlinByFood</a>
 
-A static <mark>preview</mark> 
-of the page is <mark>available</mark> here:
+<em>A static <mark>preview</mark> 
+of the page is <mark>available</mark> here:</em>
 
 <a href='https://deadusik.github.io/BerlinByFood' target="_blank" rel="noopener noreferrer">➥ GitHub Pages 👀</a>
 
@@ -175,6 +175,24 @@ Here, I learned the <mark>BEM methodology</mark> and practiced responsive web de
 <a href='https://github.com/Deadusik/ResponsiveResume.git' target="_blank" rel="noopener noreferrer">➥ GitHub ResponsiveResume</a>
 
 <em>A static <mark>preview</mark> of the page is <mark>available</mark> here</em>:
+
+<a href='https://deadusik.github.io/ResponsiveResume' target="_blank" rel="noopener noreferrer">➥ GitHub Pages 👀</a>
+
+<i>&lt;/</i><code>responsiveresume</code><i>&gt;</i>`,
+    md: `<i>&lt;</i><code>responsiveresume</code><i>&gt;</i>
+    
+This is a <mark>personal resume</mark> website.
+
+Here, I learned the <mark>BEM methodology</mark>
+and practiced responsive web design.
+
+<em>You can <mark>check out</mark> the project 
+on <mark>GitHub</mark> here</em>:
+
+<a href='https://github.com/Deadusik/ResponsiveResume.git' target="_blank" rel="noopener noreferrer">➥ GitHub ResponsiveResume</a>
+
+<em>A static <mark>preview</mark> of the page 
+is <mark>available</mark> here</em>:
 
 <a href='https://deadusik.github.io/ResponsiveResume' target="_blank" rel="noopener noreferrer">➥ GitHub Pages 👀</a>
 
@@ -323,6 +341,55 @@ the project on <mark>GitHub</mark> here</em>:
 export const ticTacToeText = {
     lg: `<i>&lt;</i><code>tictactoe</code><i>&gt;</i>
     
+This app is based on a <mark>well-known</mark> game.
+
+The main <mark>goal</mark> was to practice using the <mark>Redux</mark> state manager.
+I used a <mark>React</mark> library with <mark>TypeScript</mark> for proper type safety,
+and for the first time, I tried <mark>Tailwind</mark>,
+which allows you to style elements using <mark>utility classes</mark>.
+
+The app is client-side only.
+
+There are <mark>two</mark> game modes:
+you can play either with a <mark>friend</mark> or against a <mark>simple bot</mark>.
+
+I also added some basic app settings,
+including the ability to switch <mark>themes</mark> using <mark>useContext</mark>.
+
+<em>You can <mark>check out</mark> the project on <mark>GitHub</mark> here</em>:
+
+<a href='https://github.com/Deadusik/TicTacToe.git' target="_blank" rel="noopener noreferrer">➥ GitHub TicTacToe</a>
+
+<i>&lt;/</i><code>tictactoe</code><i>&gt;</i>`,
+    md: `<i>&lt;</i><code>tictactoe</code><i>&gt;</i>
+    
+This app is based 
+on a <mark>well-known</mark> game.
+
+The main <mark>goal</mark> was to practice 
+using the <mark>Redux</mark> state manager.
+I used a <mark>React</mark> library 
+with <mark>TypeScript</mark> for proper type safety,
+and for the first time, I tried <mark>Tailwind</mark>,
+which allows you 
+to style elements using <mark>utility classes</mark>.
+
+The app is client-side only.
+
+There are <mark>two</mark> game modes:
+you can play either 
+with a <mark>friend</mark> 
+or against a <mark>simple bot</mark>.
+
+I also added some basic app settings,
+including the ability 
+to switch <mark>themes</mark> using <mark>useContext</mark>.
+
+<em>You can <mark>check out</mark> the project 
+on <mark>GitHub</mark> here</em>:
+
+<a href='https://github.com/Deadusik/TicTacToe.git' target="_blank" rel="noopener noreferrer">➥ GitHub TicTacToe</a>
+
 <i>&lt;/</i><code>tictactoe</code><i>&gt;</i>`
 }
 
