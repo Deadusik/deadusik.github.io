@@ -39,6 +39,7 @@ export const befaArtFile = {
 export const irregularVerbsFile = {
     name: IRREGULAR_VERBS_NAME,
     text: irregularVerbsText.lg,
+    md_text: irregularVerbsText.md
 }
 
 export const ticTacToeFile = {
