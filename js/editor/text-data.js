@@ -150,13 +150,13 @@ and I also tried <mark>basic responsiveness</mark>
 to make the page look decent 
 on different screen sizes.
 
-You can <mark>check out</mark> 
-the project on <mark>GitHub</mark> here:
+<em>You can <mark>check out</mark> 
+the project on <mark>GitHub</mark> here:</em>
 
 <a href='https://github.com/Deadusik/BerlinByFood.git' target="_blank" rel="noopener noreferrer">➥ GitHub BerlinByFood</a>
 
-A static <mark>preview</mark> 
-of the page is <mark>available</mark> here:
+<em>A static <mark>preview</mark> 
+of the page is <mark>available</mark> here:</em>
 
 <a href='https://deadusik.github.io/BerlinByFood' target="_blank" rel="noopener noreferrer">➥ GitHub Pages 👀</a>
 
@@ -175,6 +175,24 @@ Here, I learned the <mark>BEM methodology</mark> and practiced responsive web de
 <a href='https://github.com/Deadusik/ResponsiveResume.git' target="_blank" rel="noopener noreferrer">➥ GitHub ResponsiveResume</a>
 
 <em>A static <mark>preview</mark> of the page is <mark>available</mark> here</em>:
+
+<a href='https://deadusik.github.io/ResponsiveResume' target="_blank" rel="noopener noreferrer">➥ GitHub Pages 👀</a>
+
+<i>&lt;/</i><code>responsiveresume</code><i>&gt;</i>`,
+    md: `<i>&lt;</i><code>responsiveresume</code><i>&gt;</i>
+    
+This is a <mark>personal resume</mark> website.
+
+Here, I learned the <mark>BEM methodology</mark>
+and practiced responsive web design.
+
+<em>You can <mark>check out</mark> the project 
+on <mark>GitHub</mark> here</em>:
+
+<a href='https://github.com/Deadusik/ResponsiveResume.git' target="_blank" rel="noopener noreferrer">➥ GitHub ResponsiveResume</a>
+
+<em>A static <mark>preview</mark> of the page 
+is <mark>available</mark> here</em>:
 
 <a href='https://deadusik.github.io/ResponsiveResume' target="_blank" rel="noopener noreferrer">➥ GitHub Pages 👀</a>
 
@@ -224,12 +242,154 @@ implemented for a <mark>mobile navbar</mark>
 export const irregularVerbsText = {
     lg: `<i>&lt;</i><code>irregularverbs</code><i>&gt;</i>
     
+This is an app for learning <mark>irregular verbs</mark>
+using a table organized by categories.
+
+In this app, I used the <mark>React</mark> library,
+<mark>Bootstrap</mark> library for styling,
+as well as <mark>React-Bootstrap</mark> for convenient integration with React.
+
+The app includes a <mark>searchable table</mark>
+you can <mark>enter</mark> a specific verb form or its translation
+to <mark>filter</mark> and find the relevant entries, if they exist.
+
+You can also choose to <mark>hide</mark> specific columns:
+the translation, and the first, second, or third forms of the verbs.
+This makes it easier to <mark>test</mark> your knowledge.
+
+There's also an exercise <mark>rating section</mark>,
+where users can rate <mark>from 1 to 5 stars</mark> by clicking on the stars.
+The selected rating is visualized like a progress bar using stars.
+
+When you <mark>hover</mark> over the stars, it shows a preview of how many stars
+will be <mark>filled-hovering</mark> over the first star shows only <mark>one</mark> filled star,
+while hovering over the last one shows <mark>all five</mark> in yellow,
+indicating a <mark>5 out of 5 rating</mark>. After a user submits a rating,
+the <mark>average score</mark> from all users is calculated 
+and displayed as the overall rating for the exercise.
+
+There is also a <mark>comments section</mark>,
+where users can <mark>leave</mark> comments and <mark>reply</mark> to others.
+Only one level of comment nesting is supported.
+The <mark>total</mark> number of comments is displayed as well.
+
+<em>You can <mark>check out</mark> the project on <mark>GitHub</mark> here</em>:
+
+<a href='https://github.com/Deadusik/irregular_verbs_react/tree/main/client' target="_blank" rel="noopener noreferrer">➥ GitHub Irregular Verbs - Client</a>
+
+<i>&lt;/</i><code>irregularverbs</code><i>&gt;</i>`,
+    md: `<i>&lt;</i><code>irregularverbs</code><i>&gt;</i>
+    
+This is an app for 
+learning <mark>irregular verbs</mark>
+using a table organized by categories.
+
+In this app, I used the <mark>React</mark> library,
+<mark>Bootstrap</mark> library for styling,
+as well as <mark>React-Bootstrap</mark> 
+for convenient integration with React.
+
+The app includes a <mark>searchable table</mark>
+you can <mark>enter</mark> a specific verb 
+form or its translation
+to <mark>filter</mark> and find 
+the relevant entries, if they exist.
+
+You can also choose 
+to <mark>hide</mark> specific columns:
+the translation, and the first, second,
+or third forms of the verbs.
+This makes it easier 
+to <mark>test</mark> your knowledge.
+
+There's also an exercise <mark>rating section</mark>,
+where users can rate <mark>from 1 to 5 stars</mark> 
+by clicking on the stars.
+The selected rating is visualized 
+like a progress bar using stars.
+
+When you <mark>hover</mark> over the stars,
+it shows a preview of how many stars
+will be <mark>filled-hovering</mark> over 
+the first star shows only 
+<mark>one</mark> filled star,
+while hovering over the last one 
+shows <mark>all five</mark> in yellow,
+indicating a <mark>5 out of 5 rating</mark>. 
+After a user submits a rating,
+the <mark>average score</mark> 
+from all users is calculated 
+and displayed as the overall rating
+for the exercise.
+
+There is also a <mark>comments section</mark>,
+where users can <mark>leave</mark> comments 
+and <mark>reply</mark> to others.
+Only one level of comment nesting 
+is supported.
+The <mark>total</mark> number of comments 
+is displayed as well.
+
+<em>You can <mark>check out</mark> 
+the project on <mark>GitHub</mark> here</em>:
+
+<a href='https://github.com/Deadusik/irregular_verbs_react/tree/main/client' target="_blank" rel="noopener noreferrer">➥ GitHub Irregular Verbs - Client</a>
+
 <i>&lt;/</i><code>irregularverbs</code><i>&gt;</i>`
 }
 
 export const ticTacToeText = {
     lg: `<i>&lt;</i><code>tictactoe</code><i>&gt;</i>
     
+This app is based on a <mark>well-known</mark> game.
+
+The main <mark>goal</mark> was to practice using the <mark>Redux</mark> state manager.
+I used a <mark>React</mark> library with <mark>TypeScript</mark> for proper type safety,
+and for the first time, I tried <mark>Tailwind</mark>,
+which allows you to style elements using <mark>utility classes</mark>.
+
+The app is client-side only.
+
+There are <mark>two</mark> game modes:
+you can play either with a <mark>friend</mark> or against a <mark>simple bot</mark>.
+
+I also added some basic app settings,
+including the ability to switch <mark>themes</mark> using <mark>useContext</mark>.
+
+<em>You can <mark>check out</mark> the project on <mark>GitHub</mark> here</em>:
+
+<a href='https://github.com/Deadusik/TicTacToe.git' target="_blank" rel="noopener noreferrer">➥ GitHub TicTacToe</a>
+
+<i>&lt;/</i><code>tictactoe</code><i>&gt;</i>`,
+    md: `<i>&lt;</i><code>tictactoe</code><i>&gt;</i>
+    
+This app is based 
+on a <mark>well-known</mark> game.
+
+The main <mark>goal</mark> was to practice 
+using the <mark>Redux</mark> state manager.
+I used a <mark>React</mark> library 
+with <mark>TypeScript</mark> for proper type safety,
+and for the first time, I tried <mark>Tailwind</mark>,
+which allows you 
+to style elements using <mark>utility classes</mark>.
+
+The app is client-side only.
+
+There are <mark>two</mark> game modes:
+you can play either 
+with a <mark>friend</mark> 
+or against a <mark>simple bot</mark>.
+
+I also added some basic app settings,
+including the ability 
+to switch <mark>themes</mark> using <mark>useContext</mark>.
+
+<em>You can <mark>check out</mark> the project 
+on <mark>GitHub</mark> here</em>:
+
+<a href='https://github.com/Deadusik/TicTacToe.git' target="_blank" rel="noopener noreferrer">➥ GitHub TicTacToe</a>
+
 <i>&lt;/</i><code>tictactoe</code><i>&gt;</i>`
 }
 

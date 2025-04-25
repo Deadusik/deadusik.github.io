@@ -23,6 +23,7 @@ export const berlinByFoodFile = {
 export const responsiveResumeFile = {
     name: RESPONSIVE_RESUME_NAME,
     text: responsiveResumeText.lg,
+    md_text: responsiveResumeText.md,
 }
 
 export const prettyDocsFile = {
@@ -39,11 +40,13 @@ export const befaArtFile = {
 export const irregularVerbsFile = {
     name: IRREGULAR_VERBS_NAME,
     text: irregularVerbsText.lg,
+    md_text: irregularVerbsText.md
 }
 
 export const ticTacToeFile = {
     name: TIC_TAC_TOE_NAME,
     text: ticTacToeText.lg,
+    md_text: ticTacToeText.md
 }
 
 export const lngCardsFile = {
