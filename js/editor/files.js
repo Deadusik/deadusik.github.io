@@ -29,12 +29,14 @@ export const responsiveResumeFile = {
 export const prettyDocsFile = {
     name: PRETTY_DOCS_NAME,
     text: prettyDocsText.lg,
+    md_text: prettyDocsText.md
 }
 
 //react projects
 export const befaArtFile = {
     name: BEFA_ART_NAME,
     text: befaArtText.lg,
+    md_text: befaArtText.md
 }
 
 export const irregularVerbsFile = {
@@ -52,11 +54,13 @@ export const ticTacToeFile = {
 export const lngCardsFile = {
     name: LNG_CARDS_NAME,
     text: lngCardsText.lg,
+    md_text: lngCardsText.md
 }
 
 
 // other
 export const readmeFile = {
     name: README_NAME,
-    text: readmeText
+    text: readmeText.lg,
+    md_text: readmeText.md
 }

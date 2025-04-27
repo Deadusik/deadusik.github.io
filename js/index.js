@@ -1,7 +1,6 @@
 import { initEditor } from "./editor/editor.js";
 import { initExplorer } from "./explorer.js";
 import { writeEditorText } from "./editor/editor-utils.js";
-import { easterEggText } from "./editor/text-data.js";
 import { checkIsMobile, getFileTextByMobile } from "./utils.js";
 import {
     PAGE_EDITOR__ACTIVE,
@@ -12,6 +11,7 @@ import {
     PAGE_CONTENT_PRELOAD,
 } from "./selectors.js";
 import { helloFile } from "./editor/files.js";
+import { initAdditionalElements } from "./additional-elements.js";
 
 
 main()
@@ -28,7 +28,6 @@ function initApp() {
     const editor = document.getElementById('editor')
     const explorer = document.getElementById('explorer')
     // elements
-    const icon = document.getElementById('icon')
     const pageContent = page.firstElementChild
     const filesButton = document.getElementById('files')
     const editorTextArea = editor.querySelector('#text-area')
@@ -49,6 +48,7 @@ function initApp() {
         editor
     }
     initExplorer(explorer, explorerRelatedElements)
+    initAdditionalElements()
 
     // handlers
     // toggle explorer visibility
@@ -69,15 +69,9 @@ function initApp() {
         setContentByMobile(window.isMobile)
     }
 
-    const iconClickHandler = () => {
-        writeEditorText(easterEggText, 2)
-        icon.removeEventListener('click', iconClickHandler)
-    }
-
     // set listeners
     window.addEventListener('resize', resizeHandler)
     filesButton.addEventListener('click', showExplorerHandler)
-    icon.addEventListener('click', iconClickHandler)
 
     // set explorer behavior by window size
     function setContentByMobile(isMobile) {
