@@ -101,9 +101,7 @@ function setEditorContent(fileName) {
             break
         }
         case readmeFile.name: {
-            clearEditor()
-            writeEditorText(readmeFile.text, 1)
-            setTabContent(readmeFile.name, '"👀"')
+            writeNextTabInfo(readmeFile, '"👀"')
             break
         }
         case berlinByFoodFile.name: {
