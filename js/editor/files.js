@@ -57,7 +57,6 @@ export const lngCardsFile = {
     md_text: lngCardsText.md
 }
 
-
 // other
 export const readmeFile = {
     name: README_NAME,

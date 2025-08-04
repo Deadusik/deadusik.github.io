@@ -37,6 +37,10 @@ for naming CSS classes
 If this <mark>managed</mark> to catch your interest, 
 feel free to check out more info on the left side in the <mark>explorer</mark> 📂
 
+You can also get my resume in PDF format:  
+
+<a href='assets/resume/deadusik_resume.pdf' download>➥ Download Resume (PDF)</a>
+
 <i>&lt;/</i><code>hello</code><i>&gt;</i>`,
     // text for md size
     md: `<i>&lt;</i><code>hello</code><i>&gt;</i>
@@ -90,6 +94,10 @@ in the <mark>explorer</mark>, just click the 📄 <mark>button</mark>
 in the top corner of the left sidebar 
 and choose whatever <mark>interests</mark> you
 
+You can also get my resume in PDF format:  
+
+<a href='assets/resume/deadusik_resume.pdf' download>➥ Download Resume (PDF)</a>
+
 <i>&lt;/</i><code>hello</code><i>&gt;</i>`
 }
 
@@ -98,7 +106,7 @@ and choose whatever <mark>interests</mark> you
 
 export const contactsText = {
     lg: `<i>&lt;</i><code>contacts</code><i>&gt;</i>
-    <i>&lt;/</i><code>telegram</code><i>&gt;</i>
+    <i>&lt;</i><code>telegram</code><i>&gt;</i>
 
         <img src='../../assets/social/telegram.svg' class='text-area-social-icon'>  <a href='@deadusik' target="_blank" rel="noopener noreferrer">@deadusik</a>
 
@@ -107,7 +115,7 @@ export const contactsText = {
 
         <img src='../../assets/social/linkedin.svg' class='text-area-social-icon'>  <a href='https://www.linkedin.com/in/deadusik/' target="_blank" rel="noopener noreferrer">Linkedin</a>
 
-    <i>&lt;</i><code>linkedin</code><i>&gt;</i>
+    <i>&lt;/</i><code>linkedin</code><i>&gt;</i>
     <i>&lt;</i><code>github</code><i>&gt;</i>
 
         <img src='../../assets/social/github.svg' class='text-area-social-icon'>  <a href='https://github.com/Deadusik' target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -301,6 +309,10 @@ implemented for a <mark>mobile navbar</mark>
 
 <a href='https://github.com/Deadusik/befa-art.git' target="_blank" rel="noopener noreferrer">➥ GitHub BefaArt</a>
 
+<em>A static <mark>preview</mark> of the page is <mark>available</mark> here</em>:
+
+<a href='https://deadusik.github.io/befa-art' target="_blank" rel="noopener noreferrer">➥ GitHub Pages 👀</a>
+
 <i>&lt;/</i><code>befart</code><i>&gt;</i>`,
     md: `<i>&lt;</i><code>befart</code><i>&gt;</i>
     
@@ -321,6 +333,11 @@ implemented for a <mark>mobile navbar</mark>
 on <mark>GitHub</mark> here</em>:
 
 <a href='https://github.com/Deadusik/befa-art.git' target="_blank" rel="noopener noreferrer">➥ GitHub BefaArt</a>
+
+<em>A static <mark>preview</mark> of the page 
+is <mark>available</mark> here</em>:
+
+<a href='https://deadusik.github.io/befa-art' target="_blank" rel="noopener noreferrer">➥ GitHub Pages 👀</a>
 
 <i>&lt;/</i><code>befart</code><i>&gt;</i>`
 }
@@ -555,7 +572,7 @@ on <mark>GitHub</mark> here</em>:
 
 // other
 export const easterEggText = {
-    icon: `\n\n<strong>resume version: <span>1.0</span>
+    icon: `\n\n<strong>resume version: <span>1.3</span>
 release date: <span>28.04.2025</span>
 status: <span>core functionality completed, ready for new adventures 🚀</span>
 special note: <span>some features are still baking in the oven 🍪</span></strong>`,

@@ -313,6 +313,7 @@ h6 {
   grid-area: explorer;
   background-color: #181818;
   border-right: 1px solid #2b2b2b;
+  overflow: auto;
 }
 .explorer__title-block {
   display: flex;
