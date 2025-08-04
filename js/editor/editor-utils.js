@@ -1,5 +1,6 @@
 import { setEditorText } from "./editor.js"
 
+const fullEditor = document.getElementById('editor')
 const editor = document.getElementById('text-area')
 const lineCounter = document.getElementById('line')
 const colCounter = document.getElementById('col')
@@ -52,4 +53,10 @@ export function setCusorInfo(line, col) {
         lineCounter.textContent = line + ','
         colCounter.textContent = col
     }
-}   
+}
+
+export function scrollEditorToBottom() {
+    if (fullEditor) {
+        fullEditor.scrollTop = fullEditor.scrollHeight
+    }
+}

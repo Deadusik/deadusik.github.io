@@ -5,6 +5,7 @@
     grid-area: explorer;
     background-color: colors.$bg-dark;
     border-right: 1px solid colors.$block-border;
+    overflow: auto;
 
     &__title-block {
         display: flex;

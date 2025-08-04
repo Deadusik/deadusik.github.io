@@ -1,4 +1,4 @@
-import { writeEditorText } from "./editor/editor-utils.js"
+import { scrollEditorToBottom, writeEditorText } from "./editor/editor-utils.js"
 import { easterEggText } from "./editor/text-data.js"
 
 // icon variables
@@ -25,6 +25,7 @@ export function initAdditionalElements() {
 
         if (iconClicks === iconTrigger) {
             writeEditorText(easterEggText.icon, 0)
+            setTimeout(scrollEditorToBottom, 100)
             icon.removeEventListener('click', iconClickHandler)
         }
     }
@@ -32,6 +33,7 @@ export function initAdditionalElements() {
     const closeButtonHandler = () => {
         const randomPhrase = getRandomPhrase(easterEggText.close)
         writeEditorText(randomPhrase)
+        setTimeout(scrollEditorToBottom, 100)
         errors++
         errorText.textContent = errors
     }
@@ -39,25 +41,32 @@ export function initAdditionalElements() {
     const errorWarningHandler = () => {
         if (errors) {
             writeEditorText(easterEggText.error)
+            setTimeout(scrollEditorToBottom, 100)
             errorWarning.removeEventListener('click', errorWarningHandler)
         }
-        else
+        else {
             writeEditorText(easterEggText.ok)
+            setTimeout(scrollEditorToBottom, 100)
+        }
     }
 
     const keydownHandler = () => {
         keyPressedCount++;
 
-        if (keyPressedCount === keyTrigger)
+        if (keyPressedCount === keyTrigger) {
             writeEditorText(easterEggText.typing)
+            setTimeout(scrollEditorToBottom, 100)
+        }
     }
 
     const titleHandler = () => {
         writeEditorText(easterEggText.title)
+        setTimeout(scrollEditorToBottom, 100)
     }
 
     const notificationHandler = () => {
         writeEditorText(easterEggText.notification)
+        setTimeout(scrollEditorToBottom, 100)
         notification.removeEventListener('click', notificationHandler)
     }
 
